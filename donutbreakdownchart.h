@@ -29,8 +29,8 @@
 #ifndef DONUTBREAKDOWNCHART_H
 #define DONUTBREAKDOWNCHART_H
 
-#include <QtCharts/QChart>
-#include <QtCharts/QPieSeries>
+#include <QChart>
+#include <QPieSeries>
 
 QT_CHARTS_USE_NAMESPACE
 

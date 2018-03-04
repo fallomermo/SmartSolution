@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'homeinicio.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -48,8 +48,8 @@ public:
 
     void retranslateUi(QWidget *HomeInicio)
     {
-        HomeInicio->setWindowTitle(QApplication::translate("HomeInicio", "Form", Q_NULLPTR));
-        plainTextEdit->setDocumentTitle(QApplication::translate("HomeInicio", "Plano de Contas", Q_NULLPTR));
+        HomeInicio->setWindowTitle(QApplication::translate("HomeInicio", "Form", nullptr));
+        plainTextEdit->setDocumentTitle(QApplication::translate("HomeInicio", "Plano de Contas", nullptr));
         plainTextEdit->setPlainText(QApplication::translate("HomeInicio", "COMO ELABORAR UM PLANO DE CONTAS CONT\303\201BIL\n"
 "J\303\272lio C\303\251sar Zanluca\n"
 "\n"
@@ -223,7 +223,7 @@ public:
 "4.2 Outras Receitas Operacionais\n"
 "4.2.1 Vendas de Ativos N\303\243o Circulantes\n"
 "4.2.1.01 Receitas de Aliena\303\247\303\243o de Investimentos\n"
-"4.2.1.02 Receitas de Aliena\303\247\303\243o do Imobilizado", Q_NULLPTR));
+"4.2.1.02 Receitas de Aliena\303\247\303\243o do Imobilizado", nullptr));
     } // retranslateUi
 
 };

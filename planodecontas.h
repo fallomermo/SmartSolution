@@ -61,8 +61,6 @@ signals:
 
 private slots:
     void atualizarTabela();
-    void empresaSelecionada();
-    void filialSelecionada();
     void filialSelecionada(const QString);
     void competenciaSelecionada();
     void focusInicioPeriodo();

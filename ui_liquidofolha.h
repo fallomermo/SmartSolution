@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'liquidofolha.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -135,14 +135,14 @@ public:
 
     void retranslateUi(QWidget *LiquidoFolha)
     {
-        LiquidoFolha->setWindowTitle(QApplication::translate("LiquidoFolha", "Form", Q_NULLPTR));
-        groupBox->setTitle(QApplication::translate("LiquidoFolha", "Empresas e Filiais", Q_NULLPTR));
-        groupBox_2->setTitle(QApplication::translate("LiquidoFolha", "Per\303\255odo", Q_NULLPTR));
-        dataIni->setDisplayFormat(QApplication::translate("LiquidoFolha", "dd/MM/yyyy", Q_NULLPTR));
-        dataFim->setDisplayFormat(QApplication::translate("LiquidoFolha", "dd/MM/yyyy", Q_NULLPTR));
-        groupBox_3->setTitle(QApplication::translate("LiquidoFolha", "A\303\247\303\265es", Q_NULLPTR));
-        botaoProcesar->setText(QApplication::translate("LiquidoFolha", "Processar", Q_NULLPTR));
-        botaoExportar->setText(QApplication::translate("LiquidoFolha", "Exportar", Q_NULLPTR));
+        LiquidoFolha->setWindowTitle(QApplication::translate("LiquidoFolha", "Form", nullptr));
+        groupBox->setTitle(QApplication::translate("LiquidoFolha", "Empresas e Filiais", nullptr));
+        groupBox_2->setTitle(QApplication::translate("LiquidoFolha", "Per\303\255odo", nullptr));
+        dataIni->setDisplayFormat(QApplication::translate("LiquidoFolha", "dd/MM/yyyy", nullptr));
+        dataFim->setDisplayFormat(QApplication::translate("LiquidoFolha", "dd/MM/yyyy", nullptr));
+        groupBox_3->setTitle(QApplication::translate("LiquidoFolha", "A\303\247\303\265es", nullptr));
+        botaoProcesar->setText(QApplication::translate("LiquidoFolha", "Processar", nullptr));
+        botaoExportar->setText(QApplication::translate("LiquidoFolha", "Exportar", nullptr));
     } // retranslateUi
 
 };

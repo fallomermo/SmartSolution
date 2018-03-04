@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'pesquisar.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -17,7 +17,6 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QWidget>
 
@@ -31,7 +30,6 @@ public:
     QHBoxLayout *horizontalLayout;
     QPushButton *botaoOK;
     QPushButton *botaoCancelar;
-    QSpacerItem *horizontalSpacer;
 
     void setupUi(QWidget *Pesquisar)
     {
@@ -62,10 +60,6 @@ public:
 
         horizontalLayout->addWidget(botaoCancelar);
 
-        horizontalSpacer = new QSpacerItem(218, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout->addItem(horizontalSpacer);
-
 
         gridLayout->addLayout(horizontalLayout, 1, 0, 1, 1);
 
@@ -79,9 +73,9 @@ public:
 
     void retranslateUi(QWidget *Pesquisar)
     {
-        Pesquisar->setWindowTitle(QApplication::translate("Pesquisar", "Form", Q_NULLPTR));
-        botaoOK->setText(QApplication::translate("Pesquisar", "OK", Q_NULLPTR));
-        botaoCancelar->setText(QApplication::translate("Pesquisar", "Cancelar", Q_NULLPTR));
+        Pesquisar->setWindowTitle(QApplication::translate("Pesquisar", "Form", nullptr));
+        botaoOK->setText(QApplication::translate("Pesquisar", "OK", nullptr));
+        botaoCancelar->setText(QApplication::translate("Pesquisar", "Cancelar", nullptr));
     } // retranslateUi
 
 };

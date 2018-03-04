@@ -17,31 +17,8 @@ DetalhesRetencao::DetalhesRetencao(
       periodoSelecionado(periodo),
       ui(new Ui::DetalhesRetencao)
 {
-    ui->setupUi(this); this->updateStatus();
-    QLocale local = this->locale();
-    double p = local.toDouble(this->getPercentualRetido());
-    if((p <= 5.0)) { ui->campoStatus->setPixmap(QPixmap(":/images/flag_otimo.png")); }
-    if((p > 5.0) && (p <= 10.0)) { ui->campoStatus->setPixmap(QPixmap(":/images/flag_bom.png")); }
-    if((p > 10.0)) { ui->campoStatus->setPixmap(QPixmap(":/images/flag_ruim.png")); }
-    ui->campoStatus->update();
-
-    QPalette pall = this->palette();
-    pall.setColor(QPalette::Window, QRgb(0xcee7f0));
-    pall.setColor(QPalette::WindowText, QRgb(0x404044));
-
-    DonutBreakdownChart *donutBreakdown = new DonutBreakdownChart();
-    donutBreakdown->setAnimationOptions(QChart::AllAnimations);
-    donutBreakdown->setTitle(this->getResponsavelSelecao());
-    donutBreakdown->legend()->setAlignment(Qt::AlignRight);
-
-    QPieSeries *series = new QPieSeries();
-    series->setName(this->getResponsavelSelecao());
-    series->append("Admitidos", this->getNumeroAdmitidos().toFloat(nullptr));
-    series->append("Demitidos", this->getNumeroDemitidos().toFloat(nullptr));
-    series->append("Retenção", this->getPercentualRetido().toFloat(nullptr));
-    donutBreakdown->addBreakdownSeries(series, Qt::darkBlue);
-    //QChartView *chartView = new QChartView(donutBreakdown);
-    ui->chartView->setRenderHint(QPainter::Antialiasing);
+    ui->setupUi(this);
+    this->updateStatus();
 }
 
 DetalhesRetencao::~DetalhesRetencao()

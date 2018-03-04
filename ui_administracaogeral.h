@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'administracaogeral.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -227,19 +227,19 @@ public:
 
     void retranslateUi(QWidget *AdministracaoGeral)
     {
-        AdministracaoGeral->setWindowTitle(QApplication::translate("AdministracaoGeral", "Severino :: Administra\303\247\303\243o de Usu\303\241rios", Q_NULLPTR));
-        groupBox->setTitle(QApplication::translate("AdministracaoGeral", "Informa\303\247\303\265es do usu\303\241rio", Q_NULLPTR));
-        label_6->setText(QApplication::translate("AdministracaoGeral", "Cadastro:", Q_NULLPTR));
-        label_2->setText(QApplication::translate("AdministracaoGeral", "Usu\303\241rio:", Q_NULLPTR));
-        label_3->setText(QApplication::translate("AdministracaoGeral", "Nome:", Q_NULLPTR));
-        label_4->setText(QApplication::translate("AdministracaoGeral", "Senha:", Q_NULLPTR));
-        label_5->setText(QApplication::translate("AdministracaoGeral", "Perfil:", Q_NULLPTR));
-        botaoCancelar->setText(QApplication::translate("AdministracaoGeral", "Cancelar", Q_NULLPTR));
-        botaoSalvar->setText(QApplication::translate("AdministracaoGeral", "Salvar", Q_NULLPTR));
-        label_7->setText(QApplication::translate("AdministracaoGeral", "\303\232ltima Altera\303\247\303\243o:", Q_NULLPTR));
+        AdministracaoGeral->setWindowTitle(QApplication::translate("AdministracaoGeral", "Severino :: Administra\303\247\303\243o de Usu\303\241rios", nullptr));
+        groupBox->setTitle(QApplication::translate("AdministracaoGeral", "Informa\303\247\303\265es do usu\303\241rio", nullptr));
+        label_6->setText(QApplication::translate("AdministracaoGeral", "Cadastro:", nullptr));
+        label_2->setText(QApplication::translate("AdministracaoGeral", "Usu\303\241rio:", nullptr));
+        label_3->setText(QApplication::translate("AdministracaoGeral", "Nome:", nullptr));
+        label_4->setText(QApplication::translate("AdministracaoGeral", "Senha:", nullptr));
+        label_5->setText(QApplication::translate("AdministracaoGeral", "Perfil:", nullptr));
+        botaoCancelar->setText(QApplication::translate("AdministracaoGeral", "Cancelar", nullptr));
+        botaoSalvar->setText(QApplication::translate("AdministracaoGeral", "Salvar", nullptr));
+        label_7->setText(QApplication::translate("AdministracaoGeral", "\303\232ltima Altera\303\247\303\243o:", nullptr));
         botaoNovoUsuario->setText(QString());
-        botaoAlterarUsuario->setText(QApplication::translate("AdministracaoGeral", "...", Q_NULLPTR));
-        botaoExcluirUsuario->setText(QApplication::translate("AdministracaoGeral", "...", Q_NULLPTR));
+        botaoAlterarUsuario->setText(QApplication::translate("AdministracaoGeral", "...", nullptr));
+        botaoExcluirUsuario->setText(QApplication::translate("AdministracaoGeral", "...", nullptr));
     } // retranslateUi
 
 };

@@ -9,20 +9,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>277</width>
-    <height>129</height>
+    <width>314</width>
+    <height>167</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>277</width>
-    <height>129</height>
+    <width>314</width>
+    <height>167</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>277</width>
-    <height>129</height>
+    <width>314</width>
+    <height>167</height>
    </size>
   </property>
   <property name="contextMenuPolicy">
@@ -37,7 +37,7 @@
   <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2">
+  <layout class="QVBoxLayout" name="verticalLayoutFrame">
    <property name="leftMargin">
     <number>2</number>
    </property>

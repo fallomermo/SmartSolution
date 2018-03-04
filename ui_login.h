@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'login.ui'
 **
-** Created by: Qt User Interface Compiler version 5.10.0
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -13,7 +13,6 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
-#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
@@ -51,7 +50,6 @@ public:
     QLineEdit *campoUsuario;
     QLabel *label_Senha;
     QLineEdit *campoSenha;
-    QCheckBox *checkBox;
     QVBoxLayout *verticalLayout_Buttons;
     QPushButton *botaoEntrar;
     QPushButton *botaoAbortar;
@@ -174,11 +172,6 @@ public:
 
         verticalLayout_Labels->addWidget(campoSenha);
 
-        checkBox = new QCheckBox(groupBox_InputLogin);
-        checkBox->setObjectName(QStringLiteral("checkBox"));
-
-        verticalLayout_Labels->addWidget(checkBox);
-
 
         verticalLayout_4->addLayout(verticalLayout_Labels);
 
@@ -224,8 +217,7 @@ public:
         verticalLayout_3->addWidget(widgetPrincipal);
 
         QWidget::setTabOrder(campoUsuario, campoSenha);
-        QWidget::setTabOrder(campoSenha, checkBox);
-        QWidget::setTabOrder(checkBox, botaoEntrar);
+        QWidget::setTabOrder(campoSenha, botaoEntrar);
         QWidget::setTabOrder(botaoEntrar, botaoAbortar);
         QWidget::setTabOrder(botaoAbortar, toolButtonAdm);
         QWidget::setTabOrder(toolButtonAdm, botaoPerfilFacebook);
@@ -245,18 +237,23 @@ public:
         toolButtonAdm->setToolTip(QApplication::translate("Login", "<html><head/><body><p align=\"center\"><span style=\" font-size:10pt; font-weight:600;\">Acessar painel de gest\303\243o de usu\303\241rios.</span></p><p align=\"center\"><img src=\":/images/iconeSeverino.png\"/></p></body></html>", nullptr));
 #endif // QT_NO_TOOLTIP
         toolButtonAdm->setText(QApplication::translate("Login", "...", nullptr));
+#ifndef QT_NO_TOOLTIP
+        botaoPerfilFacebook->setToolTip(QApplication::translate("Login", "<html><head/><body><p><br/></p><p><span style=\" font-weight:600; font-style:italic;\">Facebook: </span><a href=\"http://facebook.com/fallomermo\"><span style=\" text-decoration: underline; color:#007af4;\">http://facebook.com/fallomermo</span></a></p><p><br/></p></body></html>", nullptr));
+#endif // QT_NO_TOOLTIP
         botaoPerfilFacebook->setText(QApplication::translate("Login", "...", nullptr));
+#ifndef QT_NO_TOOLTIP
+        botaoPerfilInstagram->setToolTip(QApplication::translate("Login", "<html><head/><body><p><br/></p><p><span style=\" font-weight:600;\">Instagram: </span><a href=\"http://instagram.com/fallomermo\"><span style=\" font-weight:600; text-decoration: underline; color:#007af4;\">http://instagram.com/fallomermo</span></a></p><p><br/></p></body></html>", nullptr));
+#endif // QT_NO_TOOLTIP
         botaoPerfilInstagram->setText(QApplication::translate("Login", "...", nullptr));
+#ifndef QT_NO_TOOLTIP
+        botaoPerfilTwitter->setToolTip(QApplication::translate("Login", "<html><head/><body><p><br/></p><p><span style=\" font-weight:600;\">Twitter: </span><a href=\"http://twitter.com/fallomermo\"><span style=\" font-weight:600; text-decoration: underline; color:#007af4;\">http://twitter.com/fallomermo</span></a></p><p><br/></p></body></html>", nullptr));
+#endif // QT_NO_TOOLTIP
         botaoPerfilTwitter->setText(QApplication::translate("Login", "...", nullptr));
         label_logo->setText(QString());
         groupBox_InputLogin->setTitle(QString());
         label_Usuario->setText(QApplication::translate("Login", "Usu\303\241rio:", nullptr));
         campoUsuario->setPlaceholderText(QApplication::translate("Login", "Nome do usu\303\241rio...", nullptr));
         label_Senha->setText(QApplication::translate("Login", "Senha:", nullptr));
-#ifndef QT_NO_TOOLTIP
-        checkBox->setToolTip(QApplication::translate("Login", "<html><head/><body><p>Ser\303\241 implementado na vers\303\243o <span style=\" font-weight:600;\">2.2</span>. Thank's. <img src=\":/images/clock-circular-outline.png\"/></p></body></html>", nullptr));
-#endif // QT_NO_TOOLTIP
-        checkBox->setText(QApplication::translate("Login", "Lembrar usu\303\241rio", nullptr));
         botaoEntrar->setText(QApplication::translate("Login", "Entrar", nullptr));
         botaoAbortar->setText(QApplication::translate("Login", "Abortar", nullptr));
         labelStatus->setText(QApplication::translate("Login", "[...]", nullptr));

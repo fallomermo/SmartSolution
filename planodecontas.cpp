@@ -56,69 +56,6 @@ void PlanoDeContas::atualizarTabela()
     ui->tableWidget->resizeColumnsToContents();
 }
 
-void PlanoDeContas::empresaSelecionada()
-{
-    if(!this->getCodigoEmpresa().isEmpty()) {
-        QMapIterator<int, CadastroEmpresa*> mi(getMapEmpresas());
-        QString _nomeEmpresa;
-
-        while (mi.hasNext()) {
-            mi.next();
-            CadastroEmpresa *_cemp = new CadastroEmpresa(this);
-            _cemp = mi.value();
-
-            if(_cemp->getID_Empresa() == this->getCodigoEmpresa()) {
-                _nomeEmpresa = QString("%0 - %1").arg(_cemp->getID_Empresa()).arg(_cemp->getEmpresa());
-            }
-        }
-
-        if(_nomeEmpresa.isEmpty()) {
-            QMessageBox::critical(this, tr("Cadastro Empresa [!]"), QString("Empresa não encontrada [!]"), QMessageBox::Ok);
-            ui->campoIDEmpresa->setFocus();
-        } else {
-            ui->campoIDEmpresa->setText(_nomeEmpresa);
-            ui->campoIDFilial->setFocus();
-        }
-    } else {
-        ui->campoIDFilial->setFocus();
-    }
-}
-
-void PlanoDeContas::filialSelecionada()
-{
-    if(this->getCodigoEmpresa().isEmpty()) {
-        QMessageBox::critical(this, tr("Seleção de Filtro"), QString("Nenhuma Empresa Selecionada"), QMessageBox::Ok);
-        ui->campoIDEmpresa->setFocus();
-    } else {
-        if(!this->getCodigoFilial().isEmpty()) {
-            QMapIterator<int, CadastroFilial*> mi(getMapFiliais());
-            QString _nomeFilial;
-
-            while (mi.hasNext()) {
-                mi.next();
-                CadastroFilial *_cfil = new CadastroFilial(this);
-                _cfil = mi.value();
-
-                if(_cfil->getID_Empresa() == this->getCodigoEmpresa()) {
-                    if(_cfil->getID_Filial() == this->getCodigoFilial()) {
-                        _nomeFilial = QString("%0 - %1").arg(_cfil->getID_Filial()).arg(_cfil->getFilial());
-                    }
-                }
-            }
-
-            if(_nomeFilial.isEmpty()) {
-                QMessageBox::critical(this, tr("Cadastro Filial [!]"), QString("Filial não encontrada [!]"), QMessageBox::Ok);
-                ui->campoIDFilial->setFocus();
-            } else {
-                ui->campoIDFilial->setText(_nomeFilial);
-                ui->botaoProcessar->setFocus();
-            }
-        } else {
-            ui->campoIDFilial->setFocus();
-        }
-    }
-}
-
 void PlanoDeContas::filialSelecionada(const QString _ID_Filial)
 {
     if(this->getCodigoEmpresa().isEmpty()) {
@@ -217,13 +154,13 @@ void PlanoDeContas::pesquisarFilial()
 void PlanoDeContas::setEmpresa(const QString e)
 {
     this->setCodigoEmpresa(e);
-    this->empresaSelecionada();
+    ui->campoIDEmpresa->setText(QString().append(e));
 }
 
 void PlanoDeContas::setFilial(const QString f)
 {
     this->setCodigoFilial(f);
-    this->filialSelecionada();
+    ui->campoIDFilial->setText(QString().append(f));
 }
 
 void PlanoDeContas::getDatatable()
@@ -245,20 +182,7 @@ void PlanoDeContas::getDatatable()
     qApp->processEvents();
 
     ui->tableWidget->clear();
-    QStringList labels = QStringList() << "Código da Empresa"
-                                       << "Empresa"
-                                       << "Código da Filial"
-                                       << "Filial"
-                                       << "CNPJ"
-                                       << "Cidade Região"
-                                       << "Cálculo"
-                                       << "Competência"
-                                       << "Tipo de Cálculo"
-                                       << "Setor"
-                                       << "Código do Evento"
-                                       << "Descrição do Evento"
-                                       << "Tipo do Evento"
-                                       << "Valor";
+    QStringList labels = QStringList { "Código da Empresa","Empresa","Código da Filial","Filial","CNPJ","Cidade Região","Cálculo","Competência","Tipo de Cálculo","Setor","Código do Evento","Descrição do Evento","Tipo do Evento","Valor" };
     ui->tableWidget->setColumnCount(labels.count());
     ui->tableWidget->setHorizontalHeaderLabels(labels);
     ui->tableWidget->resizeColumnsToContents();

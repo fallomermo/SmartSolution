@@ -6,43 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>529</width>
-    <height>214</height>
+    <width>549</width>
+    <height>418</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_3">
+  <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
       <string>Período</string>
      </property>
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="2" column="0">
-       <widget class="QPushButton" name="botaoProcessar">
-        <property name="text">
-         <string>Processar</string>
-        </property>
-        <property name="icon">
-         <iconset resource="thema.qrc">
-          <normaloff>:/images/paper-plane.png</normaloff>:/images/paper-plane.png</iconset>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="QPushButton" name="botaoExportar">
-        <property name="text">
-         <string>Exportar</string>
-        </property>
-        <property name="icon">
-         <iconset resource="thema.qrc">
-          <normaloff>:/images/csv-file-format-extension.png</normaloff>:/images/csv-file-format-extension.png</iconset>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
        <widget class="QDateEdit" name="periodoInicio">
         <property name="minimumSize">
          <size>
@@ -65,7 +43,7 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
+      <item>
        <widget class="QDateEdit" name="periodoFim">
         <property name="minimumSize">
          <size>
@@ -92,12 +70,56 @@
     </widget>
    </item>
    <item row="0" column="1">
-    <widget class="QGroupBox" name="groupBox_4">
+    <widget class="QGroupBox" name="groupBox_2">
      <property name="title">
-      <string>Scouts</string>
+      <string>Ações</string>
      </property>
-     <layout class="QGridLayout" name="gridLayout_4">
-      <item row="0" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="botaoProcessar">
+        <property name="text">
+         <string>Processar</string>
+        </property>
+        <property name="icon">
+         <iconset resource="thema.qrc">
+          <normaloff>:/images/paper-plane.png</normaloff>:/images/paper-plane.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="botaoExportar">
+        <property name="text">
+         <string>Exportar</string>
+        </property>
+        <property name="icon">
+         <iconset resource="thema.qrc">
+          <normaloff>:/images/csv-file-format-extension.png</normaloff>:/images/csv-file-format-extension.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QFrame" name="frameScouts">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Admitidos:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QLabel" name="campoNumeroDeAdmitidos">
         <property name="font">
          <font>
@@ -110,11 +132,21 @@
          <string/>
         </property>
         <property name="alignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Demitidos:</string>
+        </property>
+        <property name="alignment">
          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
+      <item>
        <widget class="QLabel" name="campoNumeroDeDemitidos">
         <property name="font">
          <font>
@@ -127,31 +159,11 @@
          <string/>
         </property>
         <property name="alignment">
-         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
        </widget>
       </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="label_3">
-        <property name="text">
-         <string>Admitidos:</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_4">
-        <property name="text">
-         <string>Demitidos:</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
+      <item>
        <widget class="QLabel" name="label_5">
         <property name="text">
          <string>% Retenção:</string>
@@ -161,7 +173,7 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="1">
+      <item>
        <widget class="QLabel" name="campoPercentualRetido">
         <property name="font">
          <font>
@@ -174,24 +186,22 @@
          <string/>
         </property>
         <property name="alignment">
-         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
        </widget>
       </item>
      </layout>
     </widget>
    </item>
-   <item row="1" column="0" colspan="2">
+   <item row="2" column="0" colspan="2">
     <widget class="QLineEdit" name="campoPesquisarObjetosTabela"/>
    </item>
-   <item row="2" column="0" colspan="2">
+   <item row="3" column="0" colspan="2">
     <widget class="QTableWidget" name="tableWidget"/>
    </item>
   </layout>
  </widget>
  <tabstops>
-  <tabstop>botaoProcessar</tabstop>
-  <tabstop>botaoExportar</tabstop>
   <tabstop>campoPesquisarObjetosTabela</tabstop>
   <tabstop>tableWidget</tabstop>
  </tabstops>

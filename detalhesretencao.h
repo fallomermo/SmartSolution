@@ -5,6 +5,7 @@
 #include <QWidget>
 #include <QPixmap>
 #include <QMovie>
+#include <QChart>
 #include <QChartView>
 #include <QPieSeries>
 #include <QTableWidget>
@@ -56,6 +57,7 @@ public:
 
 private slots:
     void updateStatus();
+
 
 private:
     Ui::DetalhesRetencao *ui;

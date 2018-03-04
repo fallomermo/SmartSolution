@@ -1,13 +1,17 @@
 #include "principal.h"
 #include "ui_principal.h"
 
-Principal::Principal(QWidget *parent, QString u) : QWidget(parent), usuarioSessao(u), ui(new Ui::Principal)
+Principal::Principal(QWidget *parent, QString u, bool conn) : QWidget(parent), usuarioSessao(u), statusConexaoSenior(conn), ui(new Ui::Principal)
 {
     ui->setupUi(this);
 
     this->setTimeSession(QTime::currentTime());
     this->aplicarDefinicoesGerais();
-    this->setStatusConexaoSenior(true);
+
+    if(this->getStatusConexaoSenior())
+        ui->statusAplicacao->setPixmap(QPixmap(":/images/database_on.png"));
+    else
+        ui->statusAplicacao->setPixmap(QPixmap(":/images/database_error.png"));
 
     QThread *srv = new QThread(Q_NULLPTR);
     ControleDAO *controle = new ControleDAO(Q_NULLPTR);
@@ -55,6 +59,7 @@ void Principal::aplicarDefinicoesGerais()
     QAction *act_ControleDePonto = new QAction(QIcon(":/images/info.png"), "&Controle de Ponto", ui->toolButtonFerramentas);
     QAction *act_AdministracaoSistema = new QAction(QIcon(":/images/tools.png"), "&Administração do Sistema", ui->toolButtonFerramentas);
     QAction *act_ConversaoDeArquivos = new QAction(QIcon(":/images/file_analict.png"), "&Conversão de Arquivos", ui->toolButtonFerramentas);
+    QAction *act_CustomizarUI = new QAction(QIcon(":/images/controls.png"), "&Customizar Interface", ui->toolButtonFerramentas);
 
     QAction *act_AlterarUsuario = new QAction(QIcon(":/images/user_change.png"), "&Alterar Usuario", ui->botaoAvatar);
     QAction *act_AlterarSenha = new QAction(QIcon(":/images/password.png"), "&Alterar Senha", ui->botaoAvatar);
@@ -89,6 +94,7 @@ void Principal::aplicarDefinicoesGerais()
     connect(act_ControleDePonto,SIGNAL(triggered(bool)), this, SLOT(controleDePonto()));
     connect(act_AdministracaoSistema,SIGNAL(triggered(bool)), this, SLOT(administracaoGeral()));
     connect(act_ConversaoDeArquivos,SIGNAL(triggered(bool)), this, SLOT(conversorDeArquivo()));
+    connect(act_CustomizarUI,SIGNAL(triggered(bool)), this, SLOT(customizarInterface()));
 
     //Adicionado acoes no menu de grupo financeiro
     menuFinanceiro->addAction(act_HomeInicio);
@@ -128,6 +134,7 @@ void Principal::aplicarDefinicoesGerais()
     menuFerramentas->addAction(act_SobreSistema);
     menuFerramentas->addAction(act_AdministracaoSistema);
     menuFerramentas->addAction(act_ConversaoDeArquivos);
+    menuFerramentas->addAction(act_CustomizarUI);
     ui->toolButtonFerramentas->setMenu(menuFerramentas);
 
     //Adicionando acoes no menu de grupo Usuarios
@@ -242,7 +249,7 @@ void Principal::planoContas()
 
 void Principal::planoSaude()
 {
-    // lol -- Implementar novamente
+    QMessageBox::information(this, tr("Em desenvolvimento"), QString("Desculpe! Em desenvolvimento!"), "    OK    ");
 }
 
 void Principal::guiaInssFolha()
@@ -480,6 +487,11 @@ void Principal::conversorDeArquivo()
         _flagConversorDeArquivo = true;
         _indexConversorDeArquivo = ui->tabWidget->indexOf(__conversorDeArquivo);
     }
+}
+
+void Principal::customizarInterface()
+{
+    QMessageBox::information(this, tr("Em desenvolvimento"), QString("Desculpe! Em desenvolvimento!"), "    OK    ");
 }
 
 void Principal::closeTab(int i)

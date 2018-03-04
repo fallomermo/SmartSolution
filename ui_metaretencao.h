@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'metaretencao.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -14,8 +14,10 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDateEdit>
+#include <QtWidgets/QFrame>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -28,19 +30,21 @@ QT_BEGIN_NAMESPACE
 class Ui_MetaRetencao
 {
 public:
-    QGridLayout *gridLayout_3;
-    QGroupBox *groupBox;
     QGridLayout *gridLayout;
-    QPushButton *botaoProcessar;
-    QPushButton *botaoExportar;
+    QGroupBox *groupBox;
+    QHBoxLayout *horizontalLayout_2;
     QDateEdit *periodoInicio;
     QDateEdit *periodoFim;
-    QGroupBox *groupBox_4;
-    QGridLayout *gridLayout_4;
-    QLabel *campoNumeroDeAdmitidos;
-    QLabel *campoNumeroDeDemitidos;
+    QGroupBox *groupBox_2;
+    QHBoxLayout *horizontalLayout;
+    QPushButton *botaoProcessar;
+    QPushButton *botaoExportar;
+    QFrame *frameScouts;
+    QHBoxLayout *horizontalLayout_4;
     QLabel *label_3;
+    QLabel *campoNumeroDeAdmitidos;
     QLabel *label_4;
+    QLabel *campoNumeroDeDemitidos;
     QLabel *label_5;
     QLabel *campoPercentualRetido;
     QLineEdit *campoPesquisarObjetosTabela;
@@ -50,29 +54,13 @@ public:
     {
         if (MetaRetencao->objectName().isEmpty())
             MetaRetencao->setObjectName(QStringLiteral("MetaRetencao"));
-        MetaRetencao->resize(529, 214);
-        gridLayout_3 = new QGridLayout(MetaRetencao);
-        gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
+        MetaRetencao->resize(549, 418);
+        gridLayout = new QGridLayout(MetaRetencao);
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
         groupBox = new QGroupBox(MetaRetencao);
         groupBox->setObjectName(QStringLiteral("groupBox"));
-        gridLayout = new QGridLayout(groupBox);
-        gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        botaoProcessar = new QPushButton(groupBox);
-        botaoProcessar->setObjectName(QStringLiteral("botaoProcessar"));
-        QIcon icon;
-        icon.addFile(QStringLiteral(":/images/paper-plane.png"), QSize(), QIcon::Normal, QIcon::Off);
-        botaoProcessar->setIcon(icon);
-
-        gridLayout->addWidget(botaoProcessar, 2, 0, 1, 1);
-
-        botaoExportar = new QPushButton(groupBox);
-        botaoExportar->setObjectName(QStringLiteral("botaoExportar"));
-        QIcon icon1;
-        icon1.addFile(QStringLiteral(":/images/csv-file-format-extension.png"), QSize(), QIcon::Normal, QIcon::Off);
-        botaoExportar->setIcon(icon1);
-
-        gridLayout->addWidget(botaoExportar, 2, 1, 1, 1);
-
+        horizontalLayout_2 = new QHBoxLayout(groupBox);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         periodoInicio = new QDateEdit(groupBox);
         periodoInicio->setObjectName(QStringLiteral("periodoInicio"));
         periodoInicio->setMinimumSize(QSize(100, 0));
@@ -83,7 +71,7 @@ public:
         periodoInicio->setFont(font);
         periodoInicio->setAlignment(Qt::AlignCenter);
 
-        gridLayout->addWidget(periodoInicio, 0, 0, 1, 1);
+        horizontalLayout_2->addWidget(periodoInicio);
 
         periodoFim = new QDateEdit(groupBox);
         periodoFim->setObjectName(QStringLiteral("periodoFim"));
@@ -91,69 +79,92 @@ public:
         periodoFim->setFont(font);
         periodoFim->setAlignment(Qt::AlignCenter);
 
-        gridLayout->addWidget(periodoFim, 0, 1, 1, 1);
+        horizontalLayout_2->addWidget(periodoFim);
 
 
-        gridLayout_3->addWidget(groupBox, 0, 0, 1, 1);
+        gridLayout->addWidget(groupBox, 0, 0, 1, 1);
 
-        groupBox_4 = new QGroupBox(MetaRetencao);
-        groupBox_4->setObjectName(QStringLiteral("groupBox_4"));
-        gridLayout_4 = new QGridLayout(groupBox_4);
-        gridLayout_4->setObjectName(QStringLiteral("gridLayout_4"));
-        campoNumeroDeAdmitidos = new QLabel(groupBox_4);
-        campoNumeroDeAdmitidos->setObjectName(QStringLiteral("campoNumeroDeAdmitidos"));
-        campoNumeroDeAdmitidos->setFont(font);
-        campoNumeroDeAdmitidos->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        groupBox_2 = new QGroupBox(MetaRetencao);
+        groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
+        horizontalLayout = new QHBoxLayout(groupBox_2);
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        botaoProcessar = new QPushButton(groupBox_2);
+        botaoProcessar->setObjectName(QStringLiteral("botaoProcessar"));
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/images/paper-plane.png"), QSize(), QIcon::Normal, QIcon::Off);
+        botaoProcessar->setIcon(icon);
 
-        gridLayout_4->addWidget(campoNumeroDeAdmitidos, 0, 1, 1, 1);
+        horizontalLayout->addWidget(botaoProcessar);
 
-        campoNumeroDeDemitidos = new QLabel(groupBox_4);
-        campoNumeroDeDemitidos->setObjectName(QStringLiteral("campoNumeroDeDemitidos"));
-        campoNumeroDeDemitidos->setFont(font);
-        campoNumeroDeDemitidos->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        botaoExportar = new QPushButton(groupBox_2);
+        botaoExportar->setObjectName(QStringLiteral("botaoExportar"));
+        QIcon icon1;
+        icon1.addFile(QStringLiteral(":/images/csv-file-format-extension.png"), QSize(), QIcon::Normal, QIcon::Off);
+        botaoExportar->setIcon(icon1);
 
-        gridLayout_4->addWidget(campoNumeroDeDemitidos, 1, 1, 1, 1);
+        horizontalLayout->addWidget(botaoExportar);
 
-        label_3 = new QLabel(groupBox_4);
+
+        gridLayout->addWidget(groupBox_2, 0, 1, 1, 1);
+
+        frameScouts = new QFrame(MetaRetencao);
+        frameScouts->setObjectName(QStringLiteral("frameScouts"));
+        frameScouts->setFrameShape(QFrame::StyledPanel);
+        frameScouts->setFrameShadow(QFrame::Raised);
+        horizontalLayout_4 = new QHBoxLayout(frameScouts);
+        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
+        label_3 = new QLabel(frameScouts);
         label_3->setObjectName(QStringLiteral("label_3"));
         label_3->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_4->addWidget(label_3, 0, 0, 1, 1);
+        horizontalLayout_4->addWidget(label_3);
 
-        label_4 = new QLabel(groupBox_4);
+        campoNumeroDeAdmitidos = new QLabel(frameScouts);
+        campoNumeroDeAdmitidos->setObjectName(QStringLiteral("campoNumeroDeAdmitidos"));
+        campoNumeroDeAdmitidos->setFont(font);
+        campoNumeroDeAdmitidos->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+
+        horizontalLayout_4->addWidget(campoNumeroDeAdmitidos);
+
+        label_4 = new QLabel(frameScouts);
         label_4->setObjectName(QStringLiteral("label_4"));
         label_4->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_4->addWidget(label_4, 1, 0, 1, 1);
+        horizontalLayout_4->addWidget(label_4);
 
-        label_5 = new QLabel(groupBox_4);
+        campoNumeroDeDemitidos = new QLabel(frameScouts);
+        campoNumeroDeDemitidos->setObjectName(QStringLiteral("campoNumeroDeDemitidos"));
+        campoNumeroDeDemitidos->setFont(font);
+        campoNumeroDeDemitidos->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+
+        horizontalLayout_4->addWidget(campoNumeroDeDemitidos);
+
+        label_5 = new QLabel(frameScouts);
         label_5->setObjectName(QStringLiteral("label_5"));
         label_5->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_4->addWidget(label_5, 2, 0, 1, 1);
+        horizontalLayout_4->addWidget(label_5);
 
-        campoPercentualRetido = new QLabel(groupBox_4);
+        campoPercentualRetido = new QLabel(frameScouts);
         campoPercentualRetido->setObjectName(QStringLiteral("campoPercentualRetido"));
         campoPercentualRetido->setFont(font);
-        campoPercentualRetido->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        campoPercentualRetido->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
-        gridLayout_4->addWidget(campoPercentualRetido, 2, 1, 1, 1);
+        horizontalLayout_4->addWidget(campoPercentualRetido);
 
 
-        gridLayout_3->addWidget(groupBox_4, 0, 1, 1, 1);
+        gridLayout->addWidget(frameScouts, 1, 0, 1, 2);
 
         campoPesquisarObjetosTabela = new QLineEdit(MetaRetencao);
         campoPesquisarObjetosTabela->setObjectName(QStringLiteral("campoPesquisarObjetosTabela"));
 
-        gridLayout_3->addWidget(campoPesquisarObjetosTabela, 1, 0, 1, 2);
+        gridLayout->addWidget(campoPesquisarObjetosTabela, 2, 0, 1, 2);
 
         tableWidget = new QTableWidget(MetaRetencao);
         tableWidget->setObjectName(QStringLiteral("tableWidget"));
 
-        gridLayout_3->addWidget(tableWidget, 2, 0, 1, 2);
+        gridLayout->addWidget(tableWidget, 3, 0, 1, 2);
 
-        QWidget::setTabOrder(botaoProcessar, botaoExportar);
-        QWidget::setTabOrder(botaoExportar, campoPesquisarObjetosTabela);
         QWidget::setTabOrder(campoPesquisarObjetosTabela, tableWidget);
 
         retranslateUi(MetaRetencao);
@@ -163,18 +174,18 @@ public:
 
     void retranslateUi(QWidget *MetaRetencao)
     {
-        MetaRetencao->setWindowTitle(QApplication::translate("MetaRetencao", "Form", Q_NULLPTR));
-        groupBox->setTitle(QApplication::translate("MetaRetencao", "Per\303\255odo", Q_NULLPTR));
-        botaoProcessar->setText(QApplication::translate("MetaRetencao", "Processar", Q_NULLPTR));
-        botaoExportar->setText(QApplication::translate("MetaRetencao", "Exportar", Q_NULLPTR));
-        periodoInicio->setDisplayFormat(QApplication::translate("MetaRetencao", "MM/yyyy", Q_NULLPTR));
-        periodoFim->setDisplayFormat(QApplication::translate("MetaRetencao", "MM/yyyy", Q_NULLPTR));
-        groupBox_4->setTitle(QApplication::translate("MetaRetencao", "Scouts", Q_NULLPTR));
+        MetaRetencao->setWindowTitle(QApplication::translate("MetaRetencao", "Form", nullptr));
+        groupBox->setTitle(QApplication::translate("MetaRetencao", "Per\303\255odo", nullptr));
+        periodoInicio->setDisplayFormat(QApplication::translate("MetaRetencao", "MM/yyyy", nullptr));
+        periodoFim->setDisplayFormat(QApplication::translate("MetaRetencao", "MM/yyyy", nullptr));
+        groupBox_2->setTitle(QApplication::translate("MetaRetencao", "A\303\247\303\265es", nullptr));
+        botaoProcessar->setText(QApplication::translate("MetaRetencao", "Processar", nullptr));
+        botaoExportar->setText(QApplication::translate("MetaRetencao", "Exportar", nullptr));
+        label_3->setText(QApplication::translate("MetaRetencao", "Admitidos:", nullptr));
         campoNumeroDeAdmitidos->setText(QString());
+        label_4->setText(QApplication::translate("MetaRetencao", "Demitidos:", nullptr));
         campoNumeroDeDemitidos->setText(QString());
-        label_3->setText(QApplication::translate("MetaRetencao", "Admitidos:", Q_NULLPTR));
-        label_4->setText(QApplication::translate("MetaRetencao", "Demitidos:", Q_NULLPTR));
-        label_5->setText(QApplication::translate("MetaRetencao", "% Reten\303\247\303\243o:", Q_NULLPTR));
+        label_5->setText(QApplication::translate("MetaRetencao", "% Reten\303\247\303\243o:", nullptr));
         campoPercentualRetido->setText(QString());
     } // retranslateUi
 

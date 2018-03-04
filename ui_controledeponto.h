@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'controledeponto.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -98,10 +98,10 @@ public:
 
     void retranslateUi(QWidget *ControleDePonto)
     {
-        ControleDePonto->setWindowTitle(QApplication::translate("ControleDePonto", "Form", Q_NULLPTR));
-        groupBox->setTitle(QApplication::translate("ControleDePonto", "GroupBox", Q_NULLPTR));
-        groupBox_2->setTitle(QApplication::translate("ControleDePonto", "GroupBox", Q_NULLPTR));
-        pushButton->setText(QApplication::translate("ControleDePonto", "PushButton", Q_NULLPTR));
+        ControleDePonto->setWindowTitle(QApplication::translate("ControleDePonto", "Form", nullptr));
+        groupBox->setTitle(QApplication::translate("ControleDePonto", "GroupBox", nullptr));
+        groupBox_2->setTitle(QApplication::translate("ControleDePonto", "GroupBox", nullptr));
+        pushButton->setText(QApplication::translate("ControleDePonto", "PushButton", nullptr));
     } // retranslateUi
 
 };

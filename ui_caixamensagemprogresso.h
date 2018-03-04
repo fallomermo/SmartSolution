@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'caixamensagemprogresso.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -26,7 +26,7 @@ QT_BEGIN_NAMESPACE
 class Ui_CaixaMensagemProgresso
 {
 public:
-    QVBoxLayout *verticalLayout_2;
+    QVBoxLayout *verticalLayoutFrame;
     QFrame *frame;
     QVBoxLayout *verticalLayout;
     QLabel *labelImageFrame;
@@ -38,14 +38,14 @@ public:
         if (CaixaMensagemProgresso->objectName().isEmpty())
             CaixaMensagemProgresso->setObjectName(QStringLiteral("CaixaMensagemProgresso"));
         CaixaMensagemProgresso->setWindowModality(Qt::ApplicationModal);
-        CaixaMensagemProgresso->resize(277, 129);
-        CaixaMensagemProgresso->setMinimumSize(QSize(277, 129));
-        CaixaMensagemProgresso->setMaximumSize(QSize(277, 129));
+        CaixaMensagemProgresso->resize(314, 167);
+        CaixaMensagemProgresso->setMinimumSize(QSize(314, 167));
+        CaixaMensagemProgresso->setMaximumSize(QSize(314, 167));
         CaixaMensagemProgresso->setContextMenuPolicy(Qt::NoContextMenu);
         CaixaMensagemProgresso->setSizeGripEnabled(true);
-        verticalLayout_2 = new QVBoxLayout(CaixaMensagemProgresso);
-        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        verticalLayout_2->setContentsMargins(2, 2, 2, 2);
+        verticalLayoutFrame = new QVBoxLayout(CaixaMensagemProgresso);
+        verticalLayoutFrame->setObjectName(QStringLiteral("verticalLayoutFrame"));
+        verticalLayoutFrame->setContentsMargins(2, 2, 2, 2);
         frame = new QFrame(CaixaMensagemProgresso);
         frame->setObjectName(QStringLiteral("frame"));
         frame->setMinimumSize(QSize(100, 100));
@@ -75,7 +75,7 @@ public:
         verticalLayout->addWidget(botaoCancelar);
 
 
-        verticalLayout_2->addWidget(frame);
+        verticalLayoutFrame->addWidget(frame);
 
 
         retranslateUi(CaixaMensagemProgresso);
@@ -85,12 +85,12 @@ public:
 
     void retranslateUi(QDialog *CaixaMensagemProgresso)
     {
-        CaixaMensagemProgresso->setWindowTitle(QApplication::translate("CaixaMensagemProgresso", "Processando! Aguarde...", Q_NULLPTR));
+        CaixaMensagemProgresso->setWindowTitle(QApplication::translate("CaixaMensagemProgresso", "Processando! Aguarde...", nullptr));
 #ifndef QT_NO_TOOLTIP
-        CaixaMensagemProgresso->setToolTip(QApplication::translate("CaixaMensagemProgresso", "<html><head/><body><p>Trabalhando em sua <span style=\" font-weight:600; font-style:italic;\">requisi\303\247\303\243o</span>...</p></body></html>", Q_NULLPTR));
+        CaixaMensagemProgresso->setToolTip(QApplication::translate("CaixaMensagemProgresso", "<html><head/><body><p>Trabalhando em sua <span style=\" font-weight:600; font-style:italic;\">requisi\303\247\303\243o</span>...</p></body></html>", nullptr));
 #endif // QT_NO_TOOLTIP
         labelImageFrame->setText(QString());
-        botaoCancelar->setText(QApplication::translate("CaixaMensagemProgresso", "Cancelar", Q_NULLPTR));
+        botaoCancelar->setText(QApplication::translate("CaixaMensagemProgresso", "Cancelar", nullptr));
     } // retranslateUi
 
 };

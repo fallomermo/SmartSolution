@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'processararquivocrednosso.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -112,16 +112,16 @@ public:
 
     void retranslateUi(QWidget *ProcessarArquivoCrednosso)
     {
-        ProcessarArquivoCrednosso->setWindowTitle(QApplication::translate("ProcessarArquivoCrednosso", "Form", Q_NULLPTR));
-        groupBox->setTitle(QApplication::translate("ProcessarArquivoCrednosso", "Informa\303\247\303\265es do arquivo", Q_NULLPTR));
-        botaoAtualizar->setText(QApplication::translate("ProcessarArquivoCrednosso", "Atualizar", Q_NULLPTR));
-        botaoExportar->setText(QApplication::translate("ProcessarArquivoCrednosso", "Exportar", Q_NULLPTR));
-        botaoConverter->setText(QApplication::translate("ProcessarArquivoCrednosso", "Converter", Q_NULLPTR));
+        ProcessarArquivoCrednosso->setWindowTitle(QApplication::translate("ProcessarArquivoCrednosso", "Form", nullptr));
+        groupBox->setTitle(QApplication::translate("ProcessarArquivoCrednosso", "Informa\303\247\303\265es do arquivo", nullptr));
+        botaoAtualizar->setText(QApplication::translate("ProcessarArquivoCrednosso", "Atualizar", nullptr));
+        botaoExportar->setText(QApplication::translate("ProcessarArquivoCrednosso", "Exportar", nullptr));
+        botaoConverter->setText(QApplication::translate("ProcessarArquivoCrednosso", "Converter", nullptr));
 #ifndef QT_NO_TOOLTIP
-        campoLocalDoArquivo->setToolTip(QApplication::translate("ProcessarArquivoCrednosso", "<html><head/><body><p><span style=\" font-size:9pt;\">Caminho onde o arquivo (</span><span style=\" font-size:9pt; font-weight:600; font-style:italic;\">TXT/DAT</span><span style=\" font-size:9pt;\">) est\303\241 localizado.</span></p></body></html>", Q_NULLPTR));
+        campoLocalDoArquivo->setToolTip(QApplication::translate("ProcessarArquivoCrednosso", "<html><head/><body><p><span style=\" font-size:9pt;\">Caminho onde o arquivo (</span><span style=\" font-size:9pt; font-weight:600; font-style:italic;\">TXT/DAT</span><span style=\" font-size:9pt;\">) est\303\241 localizado.</span></p></body></html>", nullptr));
 #endif // QT_NO_TOOLTIP
-        campoLocalDoArquivo->setPlaceholderText(QApplication::translate("ProcessarArquivoCrednosso", "Endere\303\247o completo do arquivo selecionado...", Q_NULLPTR));
-        campoPesquisarObjetosTabela->setPlaceholderText(QApplication::translate("ProcessarArquivoCrednosso", "Pesquise um item na tabela abaixo digitando aqui...", Q_NULLPTR));
+        campoLocalDoArquivo->setPlaceholderText(QApplication::translate("ProcessarArquivoCrednosso", "Endere\303\247o completo do arquivo selecionado...", nullptr));
+        campoPesquisarObjetosTabela->setPlaceholderText(QApplication::translate("ProcessarArquivoCrednosso", "Pesquise um item na tabela abaixo digitando aqui...", nullptr));
     } // retranslateUi
 
 };

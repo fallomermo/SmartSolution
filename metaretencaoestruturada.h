@@ -7,7 +7,9 @@
 #include <QMovie>
 
 // Classes dos Graficos
+#include <QChart>
 #include <QBarSet>
+#include <QPieSlice>
 #include <QBarSeries>
 #include <QBarCategoryAxis>
 
@@ -101,6 +103,7 @@ private slots:
     void detalhesRetencao(QModelIndex);
     QMap<QString, ResponsavelSelecaoAgregado*> agregarValores(const QMap<int, ObjetoRetencao*>);
     void updateDadosGrafico();
+    void updateChartView(int, int);
     void girarEtiquetas(int);
     void imprimirPlotagemGrafico();
     void salvarImagemGrafico();

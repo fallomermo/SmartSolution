@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'downloadafd.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -45,7 +45,7 @@ public:
 
     void retranslateUi(QWidget *DownloadAFD)
     {
-        DownloadAFD->setWindowTitle(QApplication::translate("DownloadAFD", "Form", Q_NULLPTR));
+        DownloadAFD->setWindowTitle(QApplication::translate("DownloadAFD", "Form", nullptr));
     } // retranslateUi
 
 };

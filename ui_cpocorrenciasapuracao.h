@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'cpocorrenciasapuracao.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -130,15 +130,15 @@ public:
 
     void retranslateUi(QWidget *CPOcorrenciasApuracao)
     {
-        CPOcorrenciasApuracao->setWindowTitle(QApplication::translate("CPOcorrenciasApuracao", "Form", Q_NULLPTR));
-        groupBox->setTitle(QApplication::translate("CPOcorrenciasApuracao", "Per\303\255odo de Apura\303\247\303\243o", Q_NULLPTR));
-        apuracaoPeriodoInicial->setDisplayFormat(QApplication::translate("CPOcorrenciasApuracao", "dd/MM/yyyy", Q_NULLPTR));
-        apuracaoPeriodoFinal->setDisplayFormat(QApplication::translate("CPOcorrenciasApuracao", "dd/MM/yyyy", Q_NULLPTR));
-        groupBox_2->setTitle(QApplication::translate("CPOcorrenciasApuracao", "Per\303\255odo de Demitidos", Q_NULLPTR));
-        demitidosPeriodoInicial->setDisplayFormat(QApplication::translate("CPOcorrenciasApuracao", "dd/MM/yyyy", Q_NULLPTR));
-        demitidosPeriodoFinal->setDisplayFormat(QApplication::translate("CPOcorrenciasApuracao", "dd/MM/yyyy", Q_NULLPTR));
-        botaoProcessar->setText(QApplication::translate("CPOcorrenciasApuracao", "Processar", Q_NULLPTR));
-        botaoExportar->setText(QApplication::translate("CPOcorrenciasApuracao", "Exportar", Q_NULLPTR));
+        CPOcorrenciasApuracao->setWindowTitle(QApplication::translate("CPOcorrenciasApuracao", "Form", nullptr));
+        groupBox->setTitle(QApplication::translate("CPOcorrenciasApuracao", "Per\303\255odo de Apura\303\247\303\243o", nullptr));
+        apuracaoPeriodoInicial->setDisplayFormat(QApplication::translate("CPOcorrenciasApuracao", "dd/MM/yyyy", nullptr));
+        apuracaoPeriodoFinal->setDisplayFormat(QApplication::translate("CPOcorrenciasApuracao", "dd/MM/yyyy", nullptr));
+        groupBox_2->setTitle(QApplication::translate("CPOcorrenciasApuracao", "Per\303\255odo de Demitidos", nullptr));
+        demitidosPeriodoInicial->setDisplayFormat(QApplication::translate("CPOcorrenciasApuracao", "dd/MM/yyyy", nullptr));
+        demitidosPeriodoFinal->setDisplayFormat(QApplication::translate("CPOcorrenciasApuracao", "dd/MM/yyyy", nullptr));
+        botaoProcessar->setText(QApplication::translate("CPOcorrenciasApuracao", "Processar", nullptr));
+        botaoExportar->setText(QApplication::translate("CPOcorrenciasApuracao", "Exportar", nullptr));
     } // retranslateUi
 
 };

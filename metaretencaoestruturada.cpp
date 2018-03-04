@@ -21,7 +21,9 @@ void MetaRetencaoEstruturada::definirParametrosIniciais()
     ui->inicioPeriodo->setDate(QDateTime::currentDateTime().date().addMonths(-2));
     ui->finalPeriodo->setDate(QDateTime::currentDateTime().date());
     ui->tableWidget->setEditTriggers(QTableWidget::NoEditTriggers);
+    ui->chartView->chart()->setTheme(QChart::ChartThemeDark);
     gridLayout = new QGridLayout();
+
 
     connect(ui->inicioPeriodo, SIGNAL(editingFinished()), this, SLOT(focusPeriodoInicial()));
     connect(ui->finalPeriodo, SIGNAL(editingFinished()), this, SLOT(focusPeriodoFinal()));
@@ -32,6 +34,7 @@ void MetaRetencaoEstruturada::definirParametrosIniciais()
     connect(ui->botaoDetalhes, SIGNAL(clicked(bool)), this, SLOT(detalhesRetencao()));
     connect(ui->girarEtiquetas, SIGNAL(sliderMoved(int)), this, SLOT(girarEtiquetas(int)));
     connect(ui->botaoSalvarScreenshot, SIGNAL(clicked(bool)), this, SLOT(salvarImagemGrafico()));
+    connect(ui->tableWidget, SIGNAL(cellClicked(int,int)), this, SLOT(updateChartView(int,int)));
 
     QStringList labels = (QStringList() << "ANALISTAS" << "ADMITIDOS" << "DEMITIDOS" << "% RETENÇÃO" << "AÇÃO");
     ui->tableWidget->setColumnCount(labels.count());
@@ -128,17 +131,20 @@ void MetaRetencaoEstruturada::inserirItemTabela(int r, int c, QWidget *w)
 void MetaRetencaoEstruturada::inserirLinhaTabela(int linha, int nrColunas, ResponsavelSelecaoAgregado *objeto)
 {
     for (int coluna = 0; coluna < nrColunas; ++coluna) {
-        switch (coluna) {
+        switch (coluna)
+        {
         case RECRUTA: inserirItemTabela(linha, coluna, objeto->getReposavel()); break;
         case ADMITIDOS: inserirItemTabela(linha, coluna, objeto->getNumeroAdmitidos() ); break;
         case DEMITIDOS: inserirItemTabela(linha, coluna, objeto->getNumeroDemitidos() ); break;
-        case RETENCAO: {
+        case RETENCAO:
+        {
             double percentualRetido = 0.0;
             if(objeto->getNumeroDemitidos() <= objeto->getNumeroAdmitidos())
                 percentualRetido = ( static_cast<double>(objeto->getNumeroDemitidos()) / static_cast<double>(objeto->getNumeroAdmitidos()) ) * 100;
             inserirItemTabela(linha, coluna, percentualRetido );
         } break;
-        case ACOES: {
+        case ACOES:
+        {
             QWidget *w = new QWidget();
             QPushButton *botaoRemove = new QPushButton(this);
             botaoRemove->setIcon(QIcon(":/images/trash.png"));
@@ -185,7 +191,7 @@ void MetaRetencaoEstruturada::preencherTabela(const QMap<int, ObjetoRetencao *> 
 
 void MetaRetencaoEstruturada::caixaMensagemUsuario(QString msg)
 {
-    QMessageBox::information(this, tr("Exportação de Dados"), QString(msg), QMessageBox::Ok);
+    QMessageBox::information(this, tr("Exportar Tabela"), QString(msg), QMessageBox::Ok);
 }
 
 void MetaRetencaoEstruturada::atualizarResultados(QModelIndex i)
@@ -244,17 +250,14 @@ void MetaRetencaoEstruturada::detalhesRetencao()
 
 void MetaRetencaoEstruturada::detalhesRetencao(QModelIndex index)
 {
-    if(ui->tableWidget->rowCount() <=0)
-        return;
-
-    if(ui->tableWidget->currentRow() < 0)
+    if((ui->tableWidget->rowCount() <= 0) || (ui->tableWidget->currentRow() < 0))
         return;
 
     QString __responsavel = ui->tableWidget->item(index.row(), 0)->text();
     QString __admitidos = ui->tableWidget->item(index.row(), 1)->text();
     QString __demitidos = ui->tableWidget->item(index.row(), 2)->text();
     QString __percentual = ui->tableWidget->item(index.row(), 3)->text();
-    QString __periodosel = ui->inicioPeriodo->date().toString("dd/MM/yyyy")+" a "+ui->finalPeriodo->date().toString("dd/MM/yyyy");
+    QString __periodosel = ui->inicioPeriodo->date().toString("MM/yyyy")+" a "+ui->finalPeriodo->date().toString("MM/yyyy");
 
     detalhes = new DetalhesRetencao(this, __responsavel, __admitidos, __demitidos, __percentual, __periodosel);
     detalhes->setWindowFlag(Qt::Window);
@@ -330,7 +333,7 @@ void MetaRetencaoEstruturada::updateDadosGrafico()
     // Preparando o Eixo Y-Vertical:
     ui->customPlot->yAxis->setRange(0, 12.1);
     ui->customPlot->yAxis->setPadding(5); // a bit more space to the left border
-    ui->customPlot->yAxis->setLabel("Meta Retenção\nAno 2017");
+    ui->customPlot->yAxis->setLabel(QString("Meta Retenção\nPeríodo %0 a %1").arg(ui->inicioPeriodo->text()).arg(ui->finalPeriodo->text()));
     ui->customPlot->yAxis->setBasePen(QPen(Qt::white));
     ui->customPlot->yAxis->setTickPen(QPen(Qt::white));
     ui->customPlot->yAxis->setSubTickPen(QPen(Qt::white));
@@ -366,10 +369,10 @@ void MetaRetencaoEstruturada::updateDadosGrafico()
     if(ui->girarEtiquetas->value() == 0) {
         ui->customPlot->xAxis->setTickLabelRotation(16);
         ui->girarEtiquetas->setValue(16);
-        ui->customPlot->xAxis->setLabel(QString("Responsável pela Seleção\nRotação: %0 graus").arg(QString::number(ui->girarEtiquetas->value())));
+        ui->customPlot->xAxis->setLabel(QString("Rotação: %0 graus").arg(QString::number(ui->girarEtiquetas->value())));
     } else {
         ui->customPlot->xAxis->setTickLabelRotation(ui->girarEtiquetas->value());
-        ui->customPlot->xAxis->setLabel(QString("Responsável pela Seleção\nRotação: %0 graus").arg(QString::number(ui->girarEtiquetas->value())));
+        ui->customPlot->xAxis->setLabel(QString("Rotação: %0 graus").arg(QString::number(ui->girarEtiquetas->value())));
     }
     ui->customPlot->xAxis->setSubTicks(false);
     ui->customPlot->xAxis->setTickLength(0, 4);
@@ -387,19 +390,52 @@ void MetaRetencaoEstruturada::updateDadosGrafico()
     ui->customPlot->legend->setBrush(QColor(255, 255, 255, 100));
     ui->customPlot->legend->setBorderPen(Qt::NoPen);
     QFont legendFont = font();
-    legendFont.setPointSize(10);
+    legendFont.setPointSize(8);
     ui->customPlot->legend->setFont(legendFont);
     ui->customPlot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom | QCP::iSelectPlottables);
     ui->customPlot->rescaleAxes(true);
     ui->customPlot->replot();
+}
 
-    this->detalhesRetencao();
+void MetaRetencaoEstruturada::updateChartView(int row, int col)
+{
+    QLocale local = this->locale();
+    qDebug() << "Coluna " << col;
+    QString r = ui->tableWidget->item(row, 0)->text();
+    QString a = ui->tableWidget->item(row, 1)->text();
+    QString d = ui->tableWidget->item(row, 2)->text();
+    QString p = ui->tableWidget->item(row, 3)->text();
+
+    QPieSeries *series = new QPieSeries();
+    series->setHoleSize(0.28);
+    series->setPieSize(0.6);
+
+    QPieSlice *sliceR = series->append("Retenção", local.toFloat(p));
+    QPieSlice *sliceA = series->append("Admitidos", local.toFloat(a));
+    QPieSlice *sliceD = series->append("Demitidos", local.toFloat(d));
+    sliceR->setExploded();
+    sliceR->setLabelVisible();
+    sliceR->setExplodeDistanceFactor(0.2);
+    sliceA->setLabelVisible();
+    sliceD->setLabelVisible();
+
+    QChart *chart = new QChart();
+    chart->setAnimationOptions(QChart::AllAnimations);
+    chart->setTheme(QChart::ChartThemeBlueCerulean);
+    chart->addSeries(series);
+
+    ui->chartView->setChart(chart);
+    ui->chartView->setRenderHint(QPainter::Antialiasing);
+    ui->chartView->chart()->setTitle(r);
+    ui->chartView->chart()->legend()->setAlignment(Qt::AlignBottom);
+    ui->chartView->chart()->legend()->setFont(QFont("Arial", 8));
+    ui->chartView->update();
 }
 
 void MetaRetencaoEstruturada::girarEtiquetas(int g)
 {
     ui->customPlot->xAxis->setTickLabelRotation(g);
-    ui->customPlot->xAxis->setLabel(QString("Responsável pela Seleção\nRotação: %0 graus").arg(QString::number(ui->girarEtiquetas->value())));
+    ui->customPlot->xAxis->setLabel(QString("Rotação: %0 graus").arg(QString::number(ui->girarEtiquetas->value())));
     ui->customPlot->replot();
 }
 
@@ -411,17 +447,14 @@ void MetaRetencaoEstruturada::imprimirPlotagemGrafico()
 
 void MetaRetencaoEstruturada::salvarImagemGrafico()
 {
-    QString outputDir = QDir::homePath();
-    QString fileName = "graph.jpg" ;
-    QFile file(outputDir+"/"+fileName);
+    QString outputFileDir = QFileDialog::getSaveFileName(this, tr("Salvar"), QDir::homePath(), "*.jpg");
+    QFile file(outputFileDir);
 
     if (!file.open(QIODevice::WriteOnly|QFile::WriteOnly))
     {
-        QMessageBox::warning(0,"Could not create Project File",
-                             QObject::tr( "\n Could not create Project File on disk"));
+        QMessageBox::warning(0,"Não foi possível salvar o arquivo do projeto", QObject::tr( "\nNão foi possível criar o arquivo do projeto no disco!"));
     }
-
-    ui->customPlot->saveJpg( fileName,  0, 0, 1.0, -1  );
+    ui->customPlot->saveJpg(file.fileName(),  0, 0, 1.0, -1);
 }
 
 QMap<int, ObjetoRetencao *> MetaRetencaoEstruturada::getMapRetencao() const

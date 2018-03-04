@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'principal.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -310,23 +310,23 @@ public:
 
     void retranslateUi(QWidget *Principal)
     {
-        Principal->setWindowTitle(QApplication::translate("Principal", "Severino | Plano de Contas", Q_NULLPTR));
-        statusDevelop->setText(QApplication::translate("Principal", "F\303\241bio Reis  - fabio.reis@grupomateus.com.br", Q_NULLPTR));
-        statusAplicacao->setText(QApplication::translate("Principal", "[...]", Q_NULLPTR));
-        campoTime->setText(QApplication::translate("Principal", "...", Q_NULLPTR));
-        toolButtonRecursosHumanos->setText(QApplication::translate("Principal", "Recursos Humanos", Q_NULLPTR));
-        toolButtonIntegracaoFinanceira->setText(QApplication::translate("Principal", "Or\303\247amentos", Q_NULLPTR));
-        toolButtonCartaoCrednosso->setText(QApplication::translate("Principal", "Cart\303\243o Crednosso", Q_NULLPTR));
-        toolButtonBeneficios->setText(QApplication::translate("Principal", "Benef\303\255cios", Q_NULLPTR));
-        toolButtonControlePonto->setText(QApplication::translate("Principal", "Controle de Ponto", Q_NULLPTR));
-        toolButtonFerramentas->setText(QApplication::translate("Principal", "Diversos", Q_NULLPTR));
-        botaoSair->setText(QApplication::translate("Principal", "Sair", Q_NULLPTR));
-        toolBox->setItemText(toolBox->indexOf(pageRotinas), QApplication::translate("Principal", "Rotinas", Q_NULLPTR));
-        botaoAvatar->setText(QApplication::translate("Principal", "usu\303\241rio", Q_NULLPTR));
+        Principal->setWindowTitle(QApplication::translate("Principal", "Severino | Plano de Contas", nullptr));
+        statusDevelop->setText(QApplication::translate("Principal", "F\303\241bio Reis  - fabio.reis@grupomateus.com.br", nullptr));
+        statusAplicacao->setText(QApplication::translate("Principal", "[...]", nullptr));
+        campoTime->setText(QApplication::translate("Principal", "...", nullptr));
+        toolButtonRecursosHumanos->setText(QApplication::translate("Principal", "Recursos Humanos", nullptr));
+        toolButtonIntegracaoFinanceira->setText(QApplication::translate("Principal", "Or\303\247amentos", nullptr));
+        toolButtonCartaoCrednosso->setText(QApplication::translate("Principal", "Cart\303\243o Crednosso", nullptr));
+        toolButtonBeneficios->setText(QApplication::translate("Principal", "Benef\303\255cios", nullptr));
+        toolButtonControlePonto->setText(QApplication::translate("Principal", "Controle de Ponto", nullptr));
+        toolButtonFerramentas->setText(QApplication::translate("Principal", "Diversos", nullptr));
+        botaoSair->setText(QApplication::translate("Principal", "Sair", nullptr));
+        toolBox->setItemText(toolBox->indexOf(pageRotinas), QApplication::translate("Principal", "Rotinas", nullptr));
+        botaoAvatar->setText(QApplication::translate("Principal", "usu\303\241rio", nullptr));
 #ifndef QT_NO_SHORTCUT
-        botaoAvatar->setShortcut(QApplication::translate("Principal", "F12", Q_NULLPTR));
+        botaoAvatar->setShortcut(QApplication::translate("Principal", "F12", nullptr));
 #endif // QT_NO_SHORTCUT
-        toolBox->setItemText(toolBox->indexOf(pageUsuario), QApplication::translate("Principal", "Usu\303\241rio", Q_NULLPTR));
+        toolBox->setItemText(toolBox->indexOf(pageUsuario), QApplication::translate("Principal", "Usu\303\241rio", nullptr));
     } // retranslateUi
 
 };

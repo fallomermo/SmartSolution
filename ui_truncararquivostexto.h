@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'truncararquivostexto.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -116,12 +116,12 @@ public:
 
     void retranslateUi(QWidget *TruncarArquivosTexto)
     {
-        TruncarArquivosTexto->setWindowTitle(QApplication::translate("TruncarArquivosTexto", "Form", Q_NULLPTR));
-        label->setText(QApplication::translate("TruncarArquivosTexto", "Linhas:", Q_NULLPTR));
-        labelTotalDeLinhas->setText(QApplication::translate("TruncarArquivosTexto", "[...]", Q_NULLPTR));
-        botaoProcessar->setText(QApplication::translate("TruncarArquivosTexto", "Processar", Q_NULLPTR));
-        botaoSalvar->setText(QApplication::translate("TruncarArquivosTexto", "Salvar", Q_NULLPTR));
-        groupBox->setTitle(QApplication::translate("TruncarArquivosTexto", "Local do arquivo", Q_NULLPTR));
+        TruncarArquivosTexto->setWindowTitle(QApplication::translate("TruncarArquivosTexto", "Form", nullptr));
+        label->setText(QApplication::translate("TruncarArquivosTexto", "Linhas:", nullptr));
+        labelTotalDeLinhas->setText(QApplication::translate("TruncarArquivosTexto", "[...]", nullptr));
+        botaoProcessar->setText(QApplication::translate("TruncarArquivosTexto", "Processar", nullptr));
+        botaoSalvar->setText(QApplication::translate("TruncarArquivosTexto", "Salvar", nullptr));
+        groupBox->setTitle(QApplication::translate("TruncarArquivosTexto", "Local do arquivo", nullptr));
     } // retranslateUi
 
 };

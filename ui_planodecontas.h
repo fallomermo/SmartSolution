@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'planodecontas.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -128,6 +128,10 @@ public:
         horizontalLayout_3 = new QHBoxLayout(groupBox_Filtro_5);
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
         comboBoxTiposCalculos = new QComboBox(groupBox_Filtro_5);
+        comboBoxTiposCalculos->addItem(QString());
+        comboBoxTiposCalculos->addItem(QString());
+        comboBoxTiposCalculos->addItem(QString());
+        comboBoxTiposCalculos->addItem(QString());
         comboBoxTiposCalculos->setObjectName(QStringLiteral("comboBoxTiposCalculos"));
         QFont font;
         font.setPointSize(10);
@@ -236,30 +240,28 @@ public:
 
     void retranslateUi(QWidget *PlanoDeContas)
     {
-        PlanoDeContas->setWindowTitle(QApplication::translate("PlanoDeContas", "Form", Q_NULLPTR));
-        groupBox_Filtro->setTitle(QApplication::translate("PlanoDeContas", "Empresa e Filial", Q_NULLPTR));
-        groupBox_Filtro_3->setTitle(QApplication::translate("PlanoDeContas", "Per\303\255odo", Q_NULLPTR));
-        campoInicioPeriodo->setDisplayFormat(QApplication::translate("PlanoDeContas", "MM/yyyy", Q_NULLPTR));
-        campoFinalPeriodo->setDisplayFormat(QApplication::translate("PlanoDeContas", "MM/yyyy", Q_NULLPTR));
-        groupBox_Filtro_5->setTitle(QApplication::translate("PlanoDeContas", "Tipo de Folha", Q_NULLPTR));
-        comboBoxTiposCalculos->clear();
-        comboBoxTiposCalculos->insertItems(0, QStringList()
-         << QApplication::translate("PlanoDeContas", "11 - Folha Normal M\303\252s", Q_NULLPTR)
-         << QApplication::translate("PlanoDeContas", "14 - Folha Complementar de Diss\303\255dio Coletivo", Q_NULLPTR)
-         << QApplication::translate("PlanoDeContas", "31 - Folha de Adiantamento de 13\302\272 Sal\303\241rio", Q_NULLPTR)
-         << QApplication::translate("PlanoDeContas", "32 - Folha de 13\302\272 - Integral", Q_NULLPTR)
-        );
-        groupBox_Filtro_2->setTitle(QApplication::translate("PlanoDeContas", "Scouts", Q_NULLPTR));
-        label_14->setText(QApplication::translate("PlanoDeContas", "Total de Registros:", Q_NULLPTR));
+        PlanoDeContas->setWindowTitle(QApplication::translate("PlanoDeContas", "Form", nullptr));
+        groupBox_Filtro->setTitle(QApplication::translate("PlanoDeContas", "Empresa e Filial", nullptr));
+        groupBox_Filtro_3->setTitle(QApplication::translate("PlanoDeContas", "Per\303\255odo", nullptr));
+        campoInicioPeriodo->setDisplayFormat(QApplication::translate("PlanoDeContas", "MM/yyyy", nullptr));
+        campoFinalPeriodo->setDisplayFormat(QApplication::translate("PlanoDeContas", "MM/yyyy", nullptr));
+        groupBox_Filtro_5->setTitle(QApplication::translate("PlanoDeContas", "Tipo de Folha", nullptr));
+        comboBoxTiposCalculos->setItemText(0, QApplication::translate("PlanoDeContas", "11 - Folha Normal M\303\252s", nullptr));
+        comboBoxTiposCalculos->setItemText(1, QApplication::translate("PlanoDeContas", "14 - Folha Complementar de Diss\303\255dio Coletivo", nullptr));
+        comboBoxTiposCalculos->setItemText(2, QApplication::translate("PlanoDeContas", "31 - Folha de Adiantamento de 13\302\272 Sal\303\241rio", nullptr));
+        comboBoxTiposCalculos->setItemText(3, QApplication::translate("PlanoDeContas", "32 - Folha de 13\302\272 - Integral", nullptr));
+
+        groupBox_Filtro_2->setTitle(QApplication::translate("PlanoDeContas", "Scouts", nullptr));
+        label_14->setText(QApplication::translate("PlanoDeContas", "Total de Registros:", nullptr));
         campoEventoPlanoContas->setText(QString());
-        label_20->setText(QApplication::translate("PlanoDeContas", "Total Agrupado:", Q_NULLPTR));
+        label_20->setText(QApplication::translate("PlanoDeContas", "Total Agrupado:", nullptr));
         campoTotalRegistros->setText(QString());
         campoValorTotalAgrupado->setText(QString());
         campoValorEventoAgrupado->setText(QString());
-        label_16->setText(QApplication::translate("PlanoDeContas", "Total Geral Agrupado:", Q_NULLPTR));
-        groupBox_Filtro_4->setTitle(QApplication::translate("PlanoDeContas", "A\303\247\303\265es", Q_NULLPTR));
-        botaoProcessar->setText(QApplication::translate("PlanoDeContas", "Processar", Q_NULLPTR));
-        botaoExportar->setText(QApplication::translate("PlanoDeContas", "Exportar...", Q_NULLPTR));
+        label_16->setText(QApplication::translate("PlanoDeContas", "Total Geral Agrupado:", nullptr));
+        groupBox_Filtro_4->setTitle(QApplication::translate("PlanoDeContas", "A\303\247\303\265es", nullptr));
+        botaoProcessar->setText(QApplication::translate("PlanoDeContas", "Processar", nullptr));
+        botaoExportar->setText(QApplication::translate("PlanoDeContas", "Exportar...", nullptr));
     } // retranslateUi
 
 };

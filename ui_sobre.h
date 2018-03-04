@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'sobre.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -53,7 +53,7 @@ public:
 
     void retranslateUi(QWidget *Sobre)
     {
-        Sobre->setWindowTitle(QApplication::translate("Sobre", "Form", Q_NULLPTR));
+        Sobre->setWindowTitle(QApplication::translate("Sobre", "Form", nullptr));
         plainTextEdit->setDocumentTitle(QString());
         plainTextEdit->setPlainText(QApplication::translate("Sobre", "Morre o ator Paulo Silvino, Severino do Zorra Total, no Rio\n"
 "O humorista lutava contra um c\303\242ncer desde setembro de 2016. O ator ficou conhecido por participar do programa Zorra Total, da TV Globo\n"
@@ -69,7 +69,7 @@ public:
 "No twitter, v\303\241rios internautas lamentaram a morte do ator. Uma f\303\243 escreveu: \"E assim se vai um grande humorista descanse em paz #PauloSilvino\". Um outro internauta lembrou da famosa frase que o humorista usava no programa: \"V\303\241 em Paz Paulo Silvino, sempre vou achar gra\303\247a do \"Isso \303\251 uma Bichona, ela ta falando: 'Clodoaldo!, Clodoa"
                         "ldo!' vai deixar saudades\".\n"
 "\n"
-"Pelo Facebook, o filho do ator lamentou a morte do pai: 'Que Deus te receba de bra\303\247os abertos meu pai amado', compartilhou o filho que tamb\303\251m \303\251 ator.", Q_NULLPTR));
+"Pelo Facebook, o filho do ator lamentou a morte do pai: 'Que Deus te receba de bra\303\247os abertos meu pai amado', compartilhou o filho que tamb\303\251m \303\251 ator.", nullptr));
     } // retranslateUi
 
 };

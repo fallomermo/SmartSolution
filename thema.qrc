@@ -77,7 +77,6 @@
         <file>images/tax.png</file>
         <file>images/droplet.png</file>
         <file>images/water-drop.png</file>
-        <file>images/tema.css</file>
         <file>images/edit-table.png</file>
         <file>images/iconeSeverino.ico</file>
         <file>images/info.png</file>
@@ -113,15 +112,12 @@
         <file>images/tools.png</file>
         <file>images/iconeSeverinoInstaller.ico</file>
         <file>images/iconeSeverinoInstaller.png</file>
-        <file>images/moderntop.bmp</file>
         <file>images/settings-interface-silhouette.png</file>
         <file>images/vt.png</file>
         <file>images/backgroundPanel.jpg</file>
         <file>images/clock-circular-outline.png</file>
-        <file>images/icon_rep.png</file>
         <file>images/logo-ahgora.png</file>
         <file>images/banner.jpg</file>
-        <file>images/dialog.jpg</file>
         <file>images/spy.png</file>
         <file>images/userlogin.png</file>
         <file>images/bg_login.png</file>
@@ -169,5 +165,12 @@
         <file>images/wall-clock.png</file>
         <file>images/wax-seal-broken.png</file>
         <file>images/whatsapp-logo.png</file>
+        <file>images/backgroundPanel.png</file>
+        <file>images/cat-relogio-de-ponto.png</file>
+        <file>images/controls.png</file>
+        <file>images/method-draw-image.svg</file>
+        <file>images/notification.png</file>
+        <file>images/FlatDefault.qss</file>
+        <file>images/DarkBlue.qss</file>
     </qresource>
 </RCC>

@@ -55,7 +55,7 @@ class Principal : public QWidget
     Q_OBJECT
 
 public:
-    explicit Principal(QWidget *parent = 0, QString u = nullptr);
+    explicit Principal(QWidget *parent = 0, QString u = nullptr, bool conn = false);
     ~Principal();
 
     void aplicarDefinicoesGerais();
@@ -107,6 +107,7 @@ private slots:
     void administracaoGeral();
     void infoSobreSistema();
     void conversorDeArquivo();
+    void customizarInterface();
     void closeTab(int);
     void atualizarTema();
     void instalarTema();

@@ -24,8 +24,10 @@ QMap<int, CadastroEmpresa *> BancoDeDados::getEmpresas()
 {
     QMap<int, CadastroEmpresa *> m;
     const QString comando = QString("SELECT NUMEMP, NOMEMP FROM R030EMP WHERE NUMEMP > 1000 ORDER BY NUMEMP");
-    QSqlQuery consulta(comando);
+    QSqlQuery consulta;
     consulta.setForwardOnly(true);
+    consulta.prepare(comando);
+
     if(consulta.exec()){
         while (consulta.next()) {
             _cemp = new CadastroEmpresa();
@@ -44,8 +46,10 @@ QMap<int, CadastroFilial *> BancoDeDados::getFiliais()
 {
     QMap<int, CadastroFilial *> m;
     const QString comando = QString("SELECT NUMEMP, CODFIL, NOMFIL, NUMCGC FROM R030FIL WHERE NUMEMP > 1000 ORDER BY NUMEMP, CODFIL");
-    QSqlQuery consulta(comando);
+    QSqlQuery consulta;
     consulta.setForwardOnly(true);
+    consulta.prepare(comando);
+
     if(consulta.exec()){
         int indice = 0;
         while (consulta.next()) {
@@ -387,6 +391,8 @@ QMap<int, Eventos *> BancoDeDados::processarSaldosRegistros(QMap<QString, QMap<i
 QMap<int, ObjetoRetencao *> BancoDeDados::getMetaRetencao(QDate __dataInicio, QDate __dataFinal)
 {
     QMap<int, ObjetoRetencao *> __tempMap;
+    __dataInicio = __dataInicio.addDays(-__dataInicio.day() +1);
+    qDebug() << __dataInicio;
     QString comando = QString( "select a.numcad, "
                                "a.nomfun, "
                                "a.datafa, "

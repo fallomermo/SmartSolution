@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'higienizacaocrednosso.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -85,6 +85,10 @@ public:
         gridLayout_2->addWidget(campoDataReferencia, 1, 0, 1, 1);
 
         campoListaOpcoes = new QComboBox(groupBox_FiltroPesquisa_2);
+        campoListaOpcoes->addItem(QString());
+        campoListaOpcoes->addItem(QString());
+        campoListaOpcoes->addItem(QString());
+        campoListaOpcoes->addItem(QString());
         campoListaOpcoes->setObjectName(QStringLiteral("campoListaOpcoes"));
 
         gridLayout_2->addWidget(campoListaOpcoes, 0, 0, 1, 3);
@@ -150,21 +154,19 @@ public:
 
     void retranslateUi(QWidget *HigienizacaoCrednosso)
     {
-        HigienizacaoCrednosso->setWindowTitle(QApplication::translate("HigienizacaoCrednosso", "Form", Q_NULLPTR));
-        groupBox_FiltroPesquisa_2->setTitle(QApplication::translate("HigienizacaoCrednosso", "Filtro de Pesquisa - Compet\303\252ncia", Q_NULLPTR));
-        botaoExportar->setText(QApplication::translate("HigienizacaoCrednosso", "Exportar", Q_NULLPTR));
-        botaoProcessar->setText(QApplication::translate("HigienizacaoCrednosso", "Processar", Q_NULLPTR));
-        campoDataReferencia->setDisplayFormat(QApplication::translate("HigienizacaoCrednosso", "MM/yyyy", Q_NULLPTR));
-        campoListaOpcoes->clear();
-        campoListaOpcoes->insertItems(0, QStringList()
-         << QApplication::translate("HigienizacaoCrednosso", "Higieniza\303\247\303\243o Crednosso - Atualiza\303\247\303\243o de Retorno", Q_NULLPTR)
-         << QApplication::translate("HigienizacaoCrednosso", "Higieniza\303\247\303\243o Crednosso - Colaboradores Demitidos", Q_NULLPTR)
-         << QApplication::translate("HigienizacaoCrednosso", "Crednosso - Arquivo de Corte de F\303\251rias", Q_NULLPTR)
-         << QApplication::translate("HigienizacaoCrednosso", "Crednosso - Arquivo de Corte Folha", Q_NULLPTR)
-        );
-        groupBox_FiltroPesquisa->setTitle(QApplication::translate("HigienizacaoCrednosso", "Resultados", Q_NULLPTR));
-        label_Total->setText(QApplication::translate("HigienizacaoCrednosso", "Total:", Q_NULLPTR));
-        label_TotalDeRegistros->setText(QApplication::translate("HigienizacaoCrednosso", "Total de registros:", Q_NULLPTR));
+        HigienizacaoCrednosso->setWindowTitle(QApplication::translate("HigienizacaoCrednosso", "Form", nullptr));
+        groupBox_FiltroPesquisa_2->setTitle(QApplication::translate("HigienizacaoCrednosso", "Filtro de Pesquisa - Compet\303\252ncia", nullptr));
+        botaoExportar->setText(QApplication::translate("HigienizacaoCrednosso", "Exportar", nullptr));
+        botaoProcessar->setText(QApplication::translate("HigienizacaoCrednosso", "Processar", nullptr));
+        campoDataReferencia->setDisplayFormat(QApplication::translate("HigienizacaoCrednosso", "MM/yyyy", nullptr));
+        campoListaOpcoes->setItemText(0, QApplication::translate("HigienizacaoCrednosso", "Higieniza\303\247\303\243o Crednosso - Atualiza\303\247\303\243o de Retorno", nullptr));
+        campoListaOpcoes->setItemText(1, QApplication::translate("HigienizacaoCrednosso", "Higieniza\303\247\303\243o Crednosso - Colaboradores Demitidos", nullptr));
+        campoListaOpcoes->setItemText(2, QApplication::translate("HigienizacaoCrednosso", "Crednosso - Arquivo de Corte de F\303\251rias", nullptr));
+        campoListaOpcoes->setItemText(3, QApplication::translate("HigienizacaoCrednosso", "Crednosso - Arquivo de Corte Folha", nullptr));
+
+        groupBox_FiltroPesquisa->setTitle(QApplication::translate("HigienizacaoCrednosso", "Resultados", nullptr));
+        label_Total->setText(QApplication::translate("HigienizacaoCrednosso", "Total:", nullptr));
+        label_TotalDeRegistros->setText(QApplication::translate("HigienizacaoCrednosso", "Total de registros:", nullptr));
         campoTotalRegistros->setText(QString());
         campoValorTotal->setText(QString());
     } // retranslateUi

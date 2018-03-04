@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'conversordearquivo.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -194,20 +194,20 @@ public:
 
     void retranslateUi(QWidget *ConversorDeArquivo)
     {
-        ConversorDeArquivo->setWindowTitle(QApplication::translate("ConversorDeArquivo", "Form", Q_NULLPTR));
-        botaoAtualizaTabelas->setText(QApplication::translate("ConversorDeArquivo", "Atualizar Tabelas", Q_NULLPTR));
-        botaoExportarDados->setText(QApplication::translate("ConversorDeArquivo", "Exportar", Q_NULLPTR));
-        groupBox_2->setTitle(QApplication::translate("ConversorDeArquivo", "Checagem de registros x Planilha XLS", Q_NULLPTR));
-        botaoEventosFichaFinanceira->setText(QApplication::translate("ConversorDeArquivo", "Eventos F. Fianceira", Q_NULLPTR));
-        botaoEventosFichaFinanceira_2->setText(QApplication::translate("ConversorDeArquivo", "Inativo [1]", Q_NULLPTR));
-        botaoEventosLctoVariaveis->setText(QApplication::translate("ConversorDeArquivo", "Inativo [2]", Q_NULLPTR));
-        botaoEventosLctoVariaveis_2->setText(QApplication::translate("ConversorDeArquivo", "Inativo [3]", Q_NULLPTR));
-        groupBox->setTitle(QApplication::translate("ConversorDeArquivo", "Compet\303\252ncia x Tipo de Folha", Q_NULLPTR));
-        codigoFilialLlineEdit->setPlaceholderText(QApplication::translate("ConversorDeArquivo", "C\303\263digo da Filial", Q_NULLPTR));
-        dateEdit->setDisplayFormat(QApplication::translate("ConversorDeArquivo", "MM/yyyy", Q_NULLPTR));
-        codigoEmpresaLineEdit->setPlaceholderText(QApplication::translate("ConversorDeArquivo", "C\303\263digo da Empresa", Q_NULLPTR));
-        codigoEventoLlineEdit->setPlaceholderText(QApplication::translate("ConversorDeArquivo", "C\303\263digo do Evento", Q_NULLPTR));
-        codigoSindicatoLlineEdit->setPlaceholderText(QApplication::translate("ConversorDeArquivo", "C\303\263digo do Sindicato", Q_NULLPTR));
+        ConversorDeArquivo->setWindowTitle(QApplication::translate("ConversorDeArquivo", "Form", nullptr));
+        botaoAtualizaTabelas->setText(QApplication::translate("ConversorDeArquivo", "Atualizar Tabelas", nullptr));
+        botaoExportarDados->setText(QApplication::translate("ConversorDeArquivo", "Exportar", nullptr));
+        groupBox_2->setTitle(QApplication::translate("ConversorDeArquivo", "Checagem de registros x Planilha XLS", nullptr));
+        botaoEventosFichaFinanceira->setText(QApplication::translate("ConversorDeArquivo", "Eventos F. Fianceira", nullptr));
+        botaoEventosFichaFinanceira_2->setText(QApplication::translate("ConversorDeArquivo", "Inativo [1]", nullptr));
+        botaoEventosLctoVariaveis->setText(QApplication::translate("ConversorDeArquivo", "Inativo [2]", nullptr));
+        botaoEventosLctoVariaveis_2->setText(QApplication::translate("ConversorDeArquivo", "Inativo [3]", nullptr));
+        groupBox->setTitle(QApplication::translate("ConversorDeArquivo", "Compet\303\252ncia x Tipo de Folha", nullptr));
+        codigoFilialLlineEdit->setPlaceholderText(QApplication::translate("ConversorDeArquivo", "C\303\263digo da Filial", nullptr));
+        dateEdit->setDisplayFormat(QApplication::translate("ConversorDeArquivo", "MM/yyyy", nullptr));
+        codigoEmpresaLineEdit->setPlaceholderText(QApplication::translate("ConversorDeArquivo", "C\303\263digo da Empresa", nullptr));
+        codigoEventoLlineEdit->setPlaceholderText(QApplication::translate("ConversorDeArquivo", "C\303\263digo do Evento", nullptr));
+        codigoSindicatoLlineEdit->setPlaceholderText(QApplication::translate("ConversorDeArquivo", "C\303\263digo do Sindicato", nullptr));
     } // retranslateUi
 
 };

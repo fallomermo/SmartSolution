@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ocorrenciasapuracao.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -114,13 +114,13 @@ public:
 
     void retranslateUi(QWidget *OcorrenciasApuracao)
     {
-        OcorrenciasApuracao->setWindowTitle(QApplication::translate("OcorrenciasApuracao", "Form", Q_NULLPTR));
-        groupBox->setTitle(QApplication::translate("OcorrenciasApuracao", "Per\303\255odo", Q_NULLPTR));
-        inicioPeriiodo->setDisplayFormat(QApplication::translate("OcorrenciasApuracao", "dd/MM/yyyy", Q_NULLPTR));
-        finalPeriodo->setDisplayFormat(QApplication::translate("OcorrenciasApuracao", "dd/MM/yyyy", Q_NULLPTR));
-        groupBox_2->setTitle(QApplication::translate("OcorrenciasApuracao", "Per\303\255odo", Q_NULLPTR));
-        botaoProcessar->setText(QApplication::translate("OcorrenciasApuracao", "Processar", Q_NULLPTR));
-        botaoExportar->setText(QApplication::translate("OcorrenciasApuracao", "Exportar", Q_NULLPTR));
+        OcorrenciasApuracao->setWindowTitle(QApplication::translate("OcorrenciasApuracao", "Form", nullptr));
+        groupBox->setTitle(QApplication::translate("OcorrenciasApuracao", "Per\303\255odo", nullptr));
+        inicioPeriiodo->setDisplayFormat(QApplication::translate("OcorrenciasApuracao", "dd/MM/yyyy", nullptr));
+        finalPeriodo->setDisplayFormat(QApplication::translate("OcorrenciasApuracao", "dd/MM/yyyy", nullptr));
+        groupBox_2->setTitle(QApplication::translate("OcorrenciasApuracao", "Per\303\255odo", nullptr));
+        botaoProcessar->setText(QApplication::translate("OcorrenciasApuracao", "Processar", nullptr));
+        botaoExportar->setText(QApplication::translate("OcorrenciasApuracao", "Exportar", nullptr));
     } // retranslateUi
 
 };

@@ -2,6 +2,14 @@
 <ui version="4.0">
  <class>MetaRetencaoEstruturada</class>
  <widget class="QWidget" name="MetaRetencaoEstruturada">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>690</width>
+    <height>426</height>
+   </rect>
+  </property>
   <property name="windowTitle">
    <string>Meta Retenção Estruturada</string>
   </property>
@@ -20,12 +28,6 @@
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QDateEdit" name="inicioPeriodo">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
         <property name="wrapping">
          <bool>false</bool>
         </property>
@@ -36,10 +38,10 @@
          <bool>true</bool>
         </property>
         <property name="currentSection">
-         <enum>QDateTimeEdit::DaySection</enum>
+         <enum>QDateTimeEdit::MonthSection</enum>
         </property>
         <property name="displayFormat">
-         <string>dd/MM/yyyy</string>
+         <string>MM/yyyy</string>
         </property>
         <property name="calendarPopup">
          <bool>true</bool>
@@ -48,12 +50,6 @@
       </item>
       <item>
        <widget class="QDateEdit" name="finalPeriodo">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
         <property name="wrapping">
          <bool>false</bool>
         </property>
@@ -64,10 +60,10 @@
          <bool>true</bool>
         </property>
         <property name="currentSection">
-         <enum>QDateTimeEdit::DaySection</enum>
+         <enum>QDateTimeEdit::MonthSection</enum>
         </property>
         <property name="displayFormat">
-         <string>dd/MM/yyyy</string>
+         <string>MM/yyyy</string>
         </property>
         <property name="calendarPopup">
          <bool>true</bool>
@@ -139,15 +135,12 @@
          </attribute>
         </widget>
        </item>
+       <item>
+        <widget class="QChartView" name="chartView"/>
+       </item>
       </layout>
      </widget>
      <widget class="QFrame" name="frameGraphicPlot">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>200</height>
-       </size>
-      </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
@@ -189,6 +182,11 @@
   </layout>
  </widget>
  <customwidgets>
+  <customwidget>
+   <class>QChartView</class>
+   <extends>QGraphicsView</extends>
+   <header>qchartview.h</header>
+  </customwidget>
   <customwidget>
    <class>QCustomPlot</class>
    <extends>QWidget</extends>

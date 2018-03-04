@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'relacaocolaborador.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -169,22 +169,22 @@ public:
 
     void retranslateUi(QWidget *RelacaoColaborador)
     {
-        RelacaoColaborador->setWindowTitle(QApplication::translate("RelacaoColaborador", "Form", Q_NULLPTR));
+        RelacaoColaborador->setWindowTitle(QApplication::translate("RelacaoColaborador", "Form", nullptr));
         painelTabela->setTitle(QString());
         painelResultados->setTitle(QString());
-        campoItemSelecionado->setText(QApplication::translate("RelacaoColaborador", "[]", Q_NULLPTR));
+        campoItemSelecionado->setText(QApplication::translate("RelacaoColaborador", "[]", nullptr));
         campoTotalRegistros->setText(QString());
 #ifndef QT_NO_TOOLTIP
-        campoID_Empresa->setToolTip(QApplication::translate("RelacaoColaborador", "<html><head/><body><p><img src=\":/images/flag_otimo.png\"/>C\303\263digo da <span style=\" font-weight:600; font-style:italic;\">empresa</span> que deseja filtrar. Nesta vers\303\243o s\303\263 uma empresa \303\251 permitida.</p><p>Caso queira todas as empresas, deixe o campo em branco/vazio.</p></body></html>", Q_NULLPTR));
+        campoID_Empresa->setToolTip(QApplication::translate("RelacaoColaborador", "<html><head/><body><p><img src=\":/images/flag_otimo.png\"/>C\303\263digo da <span style=\" font-weight:600; font-style:italic;\">empresa</span> que deseja filtrar. Nesta vers\303\243o s\303\263 uma empresa \303\251 permitida.</p><p>Caso queira todas as empresas, deixe o campo em branco/vazio.</p></body></html>", nullptr));
 #endif // QT_NO_TOOLTIP
-        campoID_Empresa->setPlaceholderText(QApplication::translate("RelacaoColaborador", "C\303\263digo da Empresa", Q_NULLPTR));
+        campoID_Empresa->setPlaceholderText(QApplication::translate("RelacaoColaborador", "C\303\263digo da Empresa", nullptr));
 #ifndef QT_NO_TOOLTIP
-        campoID_Filial->setToolTip(QApplication::translate("RelacaoColaborador", "<html><head/><body><p><img src=\":/images/flag_otimo.png\"/>C\303\263digo da <span style=\" font-weight:600; font-style:italic;\">filial</span> que deseja filtrar. Nesta vers\303\243o s\303\263 uma empresa \303\251 permitida.</p><p>Caso queira todas as empresas, deixe o campo em branco/vazio.</p></body></html>", Q_NULLPTR));
+        campoID_Filial->setToolTip(QApplication::translate("RelacaoColaborador", "<html><head/><body><p><img src=\":/images/flag_otimo.png\"/>C\303\263digo da <span style=\" font-weight:600; font-style:italic;\">filial</span> que deseja filtrar. Nesta vers\303\243o s\303\263 uma empresa \303\251 permitida.</p><p>Caso queira todas as empresas, deixe o campo em branco/vazio.</p></body></html>", nullptr));
 #endif // QT_NO_TOOLTIP
-        campoID_Filial->setPlaceholderText(QApplication::translate("RelacaoColaborador", "C\303\263digo da Filial", Q_NULLPTR));
-        dataReferencia->setDisplayFormat(QApplication::translate("RelacaoColaborador", "dd/MM/yyyy", Q_NULLPTR));
-        botaoProcessar->setText(QApplication::translate("RelacaoColaborador", "Processar", Q_NULLPTR));
-        botaoExportar->setText(QApplication::translate("RelacaoColaborador", "Exportar", Q_NULLPTR));
+        campoID_Filial->setPlaceholderText(QApplication::translate("RelacaoColaborador", "C\303\263digo da Filial", nullptr));
+        dataReferencia->setDisplayFormat(QApplication::translate("RelacaoColaborador", "dd/MM/yyyy", nullptr));
+        botaoProcessar->setText(QApplication::translate("RelacaoColaborador", "Processar", nullptr));
+        botaoExportar->setText(QApplication::translate("RelacaoColaborador", "Exportar", nullptr));
     } // retranslateUi
 
 };

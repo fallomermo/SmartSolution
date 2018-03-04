@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'propriedadesusuario.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -66,9 +66,9 @@ public:
 
     void retranslateUi(QWidget *PropriedadesUsuario)
     {
-        PropriedadesUsuario->setWindowTitle(QApplication::translate("PropriedadesUsuario", "Form", Q_NULLPTR));
-        botaoAlterarUsuario->setText(QApplication::translate("PropriedadesUsuario", "Alterar Usu\303\241rio", Q_NULLPTR));
-        botaoAlterarSenha->setText(QApplication::translate("PropriedadesUsuario", "Alterar Senha", Q_NULLPTR));
+        PropriedadesUsuario->setWindowTitle(QApplication::translate("PropriedadesUsuario", "Form", nullptr));
+        botaoAlterarUsuario->setText(QApplication::translate("PropriedadesUsuario", "Alterar Usu\303\241rio", nullptr));
+        botaoAlterarSenha->setText(QApplication::translate("PropriedadesUsuario", "Alterar Senha", nullptr));
     } // retranslateUi
 
 };

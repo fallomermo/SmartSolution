@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'blissbeneficios.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -115,12 +115,12 @@ public:
 
     void retranslateUi(QWidget *BlissBeneficios)
     {
-        BlissBeneficios->setWindowTitle(QApplication::translate("BlissBeneficios", "Form", Q_NULLPTR));
-        groupBox->setTitle(QApplication::translate("BlissBeneficios", "Tipo de Arquivo", Q_NULLPTR));
-        campoImportacaoRubi->setText(QApplication::translate("BlissBeneficios", "Arquivo Importa\303\247\303\243o Rubi (Senior)", Q_NULLPTR));
-        campoImportacaoVT->setText(QApplication::translate("BlissBeneficios", "Arquivo Importa\303\247\303\243o SET(Empresa VT)", Q_NULLPTR));
-        botaoProcessar->setText(QApplication::translate("BlissBeneficios", "Processar", Q_NULLPTR));
-        botaoExportar->setText(QApplication::translate("BlissBeneficios", "Exportar", Q_NULLPTR));
+        BlissBeneficios->setWindowTitle(QApplication::translate("BlissBeneficios", "Form", nullptr));
+        groupBox->setTitle(QApplication::translate("BlissBeneficios", "Tipo de Arquivo", nullptr));
+        campoImportacaoRubi->setText(QApplication::translate("BlissBeneficios", "Arquivo Importa\303\247\303\243o Rubi (Senior)", nullptr));
+        campoImportacaoVT->setText(QApplication::translate("BlissBeneficios", "Arquivo Importa\303\247\303\243o SET(Empresa VT)", nullptr));
+        botaoProcessar->setText(QApplication::translate("BlissBeneficios", "Processar", nullptr));
+        botaoExportar->setText(QApplication::translate("BlissBeneficios", "Exportar", nullptr));
     } // retranslateUi
 
 };

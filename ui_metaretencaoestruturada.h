@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'metaretencaoestruturada.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -15,7 +15,6 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDateEdit>
 #include <QtWidgets/QFrame>
-#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
@@ -26,6 +25,7 @@
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QToolButton>
 #include <QtWidgets/QWidget>
+#include "qchartview.h"
 #include "qcustomplot.h"
 
 QT_BEGIN_NAMESPACE
@@ -47,7 +47,7 @@ public:
     QFrame *frameDados;
     QHBoxLayout *horizontalLayout_3;
     QTableWidget *tableWidget;
-    QGraphicsView *graphicsView;
+    QChartView *chartView;
     QFrame *frameGraphicPlot;
     QGridLayout *gridLayout;
     QSlider *girarEtiquetas;
@@ -58,7 +58,7 @@ public:
     {
         if (MetaRetencaoEstruturada->objectName().isEmpty())
             MetaRetencaoEstruturada->setObjectName(QStringLiteral("MetaRetencaoEstruturada"));
-        MetaRetencaoEstruturada->resize(695, 461);
+        MetaRetencaoEstruturada->resize(690, 426);
         gridLayout_2 = new QGridLayout(MetaRetencaoEstruturada);
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
         groupBox_Periodo = new QGroupBox(MetaRetencaoEstruturada);
@@ -68,27 +68,20 @@ public:
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         inicioPeriodo = new QDateEdit(groupBox_Periodo);
         inicioPeriodo->setObjectName(QStringLiteral("inicioPeriodo"));
-        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(inicioPeriodo->sizePolicy().hasHeightForWidth());
-        inicioPeriodo->setSizePolicy(sizePolicy);
         inicioPeriodo->setWrapping(false);
         inicioPeriodo->setAlignment(Qt::AlignCenter);
         inicioPeriodo->setProperty("showGroupSeparator", QVariant(true));
-        inicioPeriodo->setCurrentSection(QDateTimeEdit::DaySection);
+        inicioPeriodo->setCurrentSection(QDateTimeEdit::MonthSection);
         inicioPeriodo->setCalendarPopup(true);
 
         horizontalLayout->addWidget(inicioPeriodo);
 
         finalPeriodo = new QDateEdit(groupBox_Periodo);
         finalPeriodo->setObjectName(QStringLiteral("finalPeriodo"));
-        sizePolicy.setHeightForWidth(finalPeriodo->sizePolicy().hasHeightForWidth());
-        finalPeriodo->setSizePolicy(sizePolicy);
         finalPeriodo->setWrapping(false);
         finalPeriodo->setAlignment(Qt::AlignCenter);
         finalPeriodo->setProperty("showGroupSeparator", QVariant(true));
-        finalPeriodo->setCurrentSection(QDateTimeEdit::DaySection);
+        finalPeriodo->setCurrentSection(QDateTimeEdit::MonthSection);
         finalPeriodo->setCalendarPopup(true);
 
         horizontalLayout->addWidget(finalPeriodo);
@@ -136,15 +129,14 @@ public:
 
         horizontalLayout_3->addWidget(tableWidget);
 
-        graphicsView = new QGraphicsView(frameDados);
-        graphicsView->setObjectName(QStringLiteral("graphicsView"));
+        chartView = new QChartView(frameDados);
+        chartView->setObjectName(QStringLiteral("chartView"));
 
-        horizontalLayout_3->addWidget(graphicsView);
+        horizontalLayout_3->addWidget(chartView);
 
         splitter->addWidget(frameDados);
         frameGraphicPlot = new QFrame(splitter);
         frameGraphicPlot->setObjectName(QStringLiteral("frameGraphicPlot"));
-        frameGraphicPlot->setMinimumSize(QSize(0, 200));
         frameGraphicPlot->setFrameShape(QFrame::StyledPanel);
         frameGraphicPlot->setFrameShadow(QFrame::Raised);
         gridLayout = new QGridLayout(frameGraphicPlot);
@@ -186,19 +178,19 @@ public:
 
     void retranslateUi(QWidget *MetaRetencaoEstruturada)
     {
-        MetaRetencaoEstruturada->setWindowTitle(QApplication::translate("MetaRetencaoEstruturada", "Meta Reten\303\247\303\243o Estruturada", Q_NULLPTR));
-        groupBox_Periodo->setTitle(QApplication::translate("MetaRetencaoEstruturada", "Per\303\255odo", Q_NULLPTR));
-        inicioPeriodo->setDisplayFormat(QApplication::translate("MetaRetencaoEstruturada", "dd/MM/yyyy", Q_NULLPTR));
-        finalPeriodo->setDisplayFormat(QApplication::translate("MetaRetencaoEstruturada", "dd/MM/yyyy", Q_NULLPTR));
-        groupBox_Acoes->setTitle(QApplication::translate("MetaRetencaoEstruturada", "A\303\247\303\265es", Q_NULLPTR));
-        botaoProcessar->setText(QApplication::translate("MetaRetencaoEstruturada", "Processar", Q_NULLPTR));
-        botaoDetalhes->setText(QApplication::translate("MetaRetencaoEstruturada", "Detalhes", Q_NULLPTR));
-        botaoImprimir->setText(QApplication::translate("MetaRetencaoEstruturada", "Imprimir", Q_NULLPTR));
+        MetaRetencaoEstruturada->setWindowTitle(QApplication::translate("MetaRetencaoEstruturada", "Meta Reten\303\247\303\243o Estruturada", nullptr));
+        groupBox_Periodo->setTitle(QApplication::translate("MetaRetencaoEstruturada", "Per\303\255odo", nullptr));
+        inicioPeriodo->setDisplayFormat(QApplication::translate("MetaRetencaoEstruturada", "MM/yyyy", nullptr));
+        finalPeriodo->setDisplayFormat(QApplication::translate("MetaRetencaoEstruturada", "MM/yyyy", nullptr));
+        groupBox_Acoes->setTitle(QApplication::translate("MetaRetencaoEstruturada", "A\303\247\303\265es", nullptr));
+        botaoProcessar->setText(QApplication::translate("MetaRetencaoEstruturada", "Processar", nullptr));
+        botaoDetalhes->setText(QApplication::translate("MetaRetencaoEstruturada", "Detalhes", nullptr));
+        botaoImprimir->setText(QApplication::translate("MetaRetencaoEstruturada", "Imprimir", nullptr));
 #ifndef QT_NO_TOOLTIP
-        girarEtiquetas->setToolTip(QApplication::translate("MetaRetencaoEstruturada", "<html><head/><body><p>Girar etiquetas <span style=\" font-weight:600; font-style:italic;\">&quot;</span><span style=\" font-weight:600; font-style:italic; color:#0055ff;\">Respons\303\241veis pela Sele\303\247\303\243o</span><span style=\" font-weight:600; font-style:italic;\">&quot;</span>.</p></body></html>", Q_NULLPTR));
+        girarEtiquetas->setToolTip(QApplication::translate("MetaRetencaoEstruturada", "<html><head/><body><p>Girar etiquetas <span style=\" font-weight:600; font-style:italic;\">&quot;</span><span style=\" font-weight:600; font-style:italic; color:#0055ff;\">Respons\303\241veis pela Sele\303\247\303\243o</span><span style=\" font-weight:600; font-style:italic;\">&quot;</span>.</p></body></html>", nullptr));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_TOOLTIP
-        botaoSalvarScreenshot->setToolTip(QApplication::translate("MetaRetencaoEstruturada", "<html><head/><body><p>Salvar <span style=\" font-weight:600; font-style:italic;\">screenshot</span> da plotagem do gr\303\241fico.</p></body></html>", Q_NULLPTR));
+        botaoSalvarScreenshot->setToolTip(QApplication::translate("MetaRetencaoEstruturada", "<html><head/><body><p>Salvar <span style=\" font-weight:600; font-style:italic;\">screenshot</span> da plotagem do gr\303\241fico.</p></body></html>", nullptr));
 #endif // QT_NO_TOOLTIP
         botaoSalvarScreenshot->setText(QString());
     } // retranslateUi
