@@ -3,6 +3,8 @@
 # Project created by QtCreator 2018-02-28T14:52:26
 #
 #-------------------------------------------------
+# If there is no version tag in git this one will be used
+
 
 QT       += core gui sql network printsupport charts
 
@@ -15,8 +17,8 @@ TEMPLATE = app
 # any feature of Qt which has been marked as deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
 # deprecated API in order to know how to port your code away from it.
-DEFINES += QT_DEPRECATED_WARNINGS _ATL_NATIVE_INITIALIZATION \
-GIT_CURRENT_SHA1="\\\"$(shell git -C \""$$_PRO_FILE_PWD_"\" describe)\\\""
+TAG_VERSION = $$system(git --git-dir $$PWD/.git --work-tree $$PWD describe --always --tags)
+DEFINES += QT_DEPRECATED_WARNINGS _ATL_NATIVE_INITIALIZATION APP_VERSION=\\\"$$TAG_VERSION\\\"
 
 # You can also make your code fail to compile if you use deprecated APIs.
 # In order to do so, uncomment the following line.

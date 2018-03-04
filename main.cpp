@@ -1,12 +1,14 @@
 #include "login.h"
 
+#define APP_VERSION
+
+
 #include <QFile>
+#include <QDebug>
 #include <QString>
 #include <QIODevice>
 #include <QTextStream>
 #include <QApplication>
-
-#define GIT_CURRENT_SHA1
 
 Login *setup ()
 {
@@ -35,8 +37,9 @@ int main(int argc, char *argv[])
     /*
      * Esta definição é usada para que os ajustes do QSettings não se confunda com os demais aplicativos
     */
+
     a.setApplicationName("Smart Solution");
-    a.setApplicationVersion(QString(GIT_CURRENT_SHA1));
+    a.setApplicationVersion(QString(APP_VERSION));
     a.setOrganizationName("DRS Smart");
     a.setOrganizationDomain("www.drssmart.com");
 
